@@ -9,10 +9,13 @@ public class Carro : MonoBehaviour
     public GameObject gear;
     public int maxLevelPreciosion = 10;
     public int currentPrecision;
+    private float currentSpeed = 2;
     // Start is called before the first frame update
     void Start()
     {
         ChangePrecision();
+        gear.GetComponent<moveSphere>().speed = currentSpeed * 5;
+    
     }
 
     // Update is called once per frame
@@ -43,7 +46,7 @@ public class Carro : MonoBehaviour
                 else
                     juntas[i].gameObject.SetActive(false);
             }
-        };
+        }
     }
 }
-}
+
