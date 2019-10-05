@@ -21,13 +21,13 @@ public class moveSphere : MonoBehaviour
         
         if (Input.GetKey(KeyCode.A))
         {
-            transform.position += -transform.right * speed * Time.deltaTime*2;
+            transform.position += transform.right * speed * Time.deltaTime*2;
             //transform.Rotate(Vector3.up, 360*Time.deltaTime);
             //transform.RotateAround(shoppingCart.transform.position, Vector3.up, -400 * Time.deltaTime);
         }
         if (Input.GetKey(KeyCode.D))
         {
-            transform.position += transform.right * speed * Time.deltaTime*2;
+            transform.position -= transform.right * speed * Time.deltaTime*2;
            // transform.RotateAround(shoppingCart.transform.position, Vector3.up, 400 * Time.deltaTime);
         }
         if (Input.GetKey(KeyCode.S))
