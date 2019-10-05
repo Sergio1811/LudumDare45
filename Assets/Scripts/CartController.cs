@@ -23,16 +23,23 @@ public class CartController : MonoBehaviour
     [Header("Model Parts")]
     public Transform ruedasDelanteras;
     public Transform ruedasTraseras;
+
+    public float peso = 0;
+    public float maxPeso = 4;
+    private BoxCollider coll;
+    private bool pesoChanged = false;
     // Start is called before the first frame update
     void Start()
     {
         transform.position = box.transform.position;//SEGUIR AL COLLIDER
+        coll = box.GetComponent<BoxCollider>();
     }
 
     // Update is called once per frame
     void Update()
     {
         transform.position = box.transform.position;//SEGUIR AL COLLIDER
+        //ChangePeso(peso);
 
         if (Input.GetKey(KeyCode.W))
         {
@@ -91,6 +98,13 @@ public class CartController : MonoBehaviour
 
 
 
+    }
+
+    public void ChangePeso(float _peso)
+    { 
+        peso = Mathf.Clamp(_peso, 0, maxPeso);
+        cartNormal.transform.position = new Vector3(cartNormal.transform.position.x, cartNormal.transform.position.y, peso + cartNormal.transform.position.z);
+        coll.center = new Vector3(coll.center.x, coll.center.y, peso + 1);
     }
 }
 
