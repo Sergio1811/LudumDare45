@@ -5,6 +5,9 @@ using UnityEngine;
 public class ObjectFall : MonoBehaviour
 {
     public float m_ExplosionForce;
+    public float m_Duration;
+    public float m_Force;
+    public float m_MaxDistance;
 
     void Update()
     {
@@ -21,7 +24,10 @@ public class ObjectFall : MonoBehaviour
         print(l_Direction); 
         foreach (Rigidbody item in l_RigidBodies)
         {
-            item.AddForce(l_Direction*m_ExplosionForce);
+            item.AddForce(l_Direction*m_ExplosionForce, ForceMode.Impulse);
         }
+
+
+        StartCoroutine(GameManager.Instance.m_CameraShake.Shake(m_Duration,m_Force, m_MaxDistance));
     }
 }
