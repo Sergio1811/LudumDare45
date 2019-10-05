@@ -119,7 +119,37 @@ NavMeshSettings:
     accuratePlacement: 0
     debug:
       m_Flags: 0
-  m_NavMeshData: {fileID: 0}
+  m_NavMeshData: {fileID: 23800000, guid: 6fe64585664f6d6419e9cd228a53b73c, type: 2}
+--- !u!1 &8241613
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 8241614}
+  m_Layer: 0
+  m_Name: GameObject (3)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &8241614
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8241613}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 12.52, y: 0.31, z: -10.23}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 9
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &11466712
 GameObject:
   m_ObjectHideFlags: 0
@@ -133,12 +163,13 @@ GameObject:
   - component: {fileID: 11466714}
   - component: {fileID: 11466713}
   - component: {fileID: 11466717}
+  - component: {fileID: 11466718}
   m_Layer: 0
   m_Name: Cube (5)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 4294967295
   m_IsActive: 1
 --- !u!65 &11466713
 BoxCollider:
@@ -219,7 +250,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 11466712}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 0d1044ad4f722d74abf0a2e33741e876, type: 3}
   m_Name: 
@@ -228,6 +259,22 @@ MonoBehaviour:
   m_Duration: 0.35
   m_Force: 0.1
   m_MaxDistance: 1.5
+--- !u!54 &11466718
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 11466712}
+  serializedVersion: 2
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_UseGravity: 0
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 1
 --- !u!1 &11940289
 GameObject:
   m_ObjectHideFlags: 0
@@ -286,12 +333,13 @@ GameObject:
   - component: {fileID: 70481700}
   - component: {fileID: 70481699}
   - component: {fileID: 70481703}
+  - component: {fileID: 70481704}
   m_Layer: 0
   m_Name: Cube (9)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 4294967295
   m_IsActive: 1
 --- !u!65 &70481699
 BoxCollider:
@@ -372,7 +420,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 70481698}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 0d1044ad4f722d74abf0a2e33741e876, type: 3}
   m_Name: 
@@ -381,6 +429,22 @@ MonoBehaviour:
   m_Duration: 0.35
   m_Force: 0.1
   m_MaxDistance: 1.5
+--- !u!54 &70481704
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 70481698}
+  serializedVersion: 2
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_UseGravity: 0
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 1
 --- !u!1 &264656367
 GameObject:
   m_ObjectHideFlags: 0
@@ -394,12 +458,13 @@ GameObject:
   - component: {fileID: 264656369}
   - component: {fileID: 264656368}
   - component: {fileID: 264656372}
+  - component: {fileID: 264656373}
   m_Layer: 0
   m_Name: Cube (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 4294967295
   m_IsActive: 1
 --- !u!65 &264656368
 BoxCollider:
@@ -483,7 +548,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 264656367}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 0d1044ad4f722d74abf0a2e33741e876, type: 3}
   m_Name: 
@@ -492,6 +557,22 @@ MonoBehaviour:
   m_Duration: 0.35
   m_Force: 0.1
   m_MaxDistance: 1.5
+--- !u!54 &264656373
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 264656367}
+  serializedVersion: 2
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_UseGravity: 0
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 1
 --- !u!1 &408193180
 GameObject:
   m_ObjectHideFlags: 0
@@ -539,7 +620,7 @@ GameObject:
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 4294967295
   m_IsActive: 1
 --- !u!64 &450300362
 MeshCollider:
@@ -627,12 +708,13 @@ GameObject:
   - component: {fileID: 477456662}
   - component: {fileID: 477456661}
   - component: {fileID: 477456665}
+  - component: {fileID: 477456666}
   m_Layer: 0
   m_Name: Cube (3)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 4294967295
   m_IsActive: 1
 --- !u!65 &477456661
 BoxCollider:
@@ -713,7 +795,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 477456660}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 0d1044ad4f722d74abf0a2e33741e876, type: 3}
   m_Name: 
@@ -722,6 +804,22 @@ MonoBehaviour:
   m_Duration: 0.35
   m_Force: 0.1
   m_MaxDistance: 1.5
+--- !u!54 &477456666
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 477456660}
+  serializedVersion: 2
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_UseGravity: 0
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 1
 --- !u!1 &483041706
 GameObject:
   m_ObjectHideFlags: 0
@@ -872,7 +970,7 @@ GameObject:
   - component: {fileID: 526444931}
   - component: {fileID: 526444934}
   - component: {fileID: 526444933}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Carro (3)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -981,12 +1079,13 @@ GameObject:
   - component: {fileID: 725229264}
   - component: {fileID: 725229263}
   - component: {fileID: 725229267}
+  - component: {fileID: 725229268}
   m_Layer: 0
   m_Name: Cube (8)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 4294967295
   m_IsActive: 1
 --- !u!65 &725229263
 BoxCollider:
@@ -1070,7 +1169,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 725229262}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 0d1044ad4f722d74abf0a2e33741e876, type: 3}
   m_Name: 
@@ -1079,6 +1178,22 @@ MonoBehaviour:
   m_Duration: 0.35
   m_Force: 0.1
   m_MaxDistance: 1.5
+--- !u!54 &725229268
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 725229262}
+  serializedVersion: 2
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_UseGravity: 0
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 1
 --- !u!1 &747173080
 GameObject:
   m_ObjectHideFlags: 0
@@ -1092,7 +1207,7 @@ GameObject:
   - component: {fileID: 747173084}
   - component: {fileID: 747173083}
   - component: {fileID: 747173082}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Cylinder
   m_TagString: Object
   m_Icon: {fileID: 0}
@@ -1419,7 +1534,7 @@ GameObject:
   - component: {fileID: 790698485}
   - component: {fileID: 790698484}
   - component: {fileID: 790698483}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Cube (1)
   m_TagString: Object
   m_Icon: {fileID: 0}
@@ -1666,7 +1781,8 @@ GameObject:
   - component: {fileID: 842508660}
   - component: {fileID: 842508659}
   - component: {fileID: 842508663}
-  m_Layer: 0
+  - component: {fileID: 842508664}
+  m_Layer: 8
   m_Name: Player
   m_TagString: Player
   m_Icon: {fileID: 0}
@@ -1765,6 +1881,22 @@ MonoBehaviour:
   movementSpeed: 5
   rotationSpeed: 200
   m_PositionsCarro: []
+--- !u!54 &842508664
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 842508658}
+  serializedVersion: 2
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_UseGravity: 0
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 1
 --- !u!1 &847964548
 GameObject:
   m_ObjectHideFlags: 0
@@ -1872,7 +2004,7 @@ GameObject:
   - component: {fileID: 870583648}
   - component: {fileID: 870583651}
   - component: {fileID: 870583650}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Carro (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1951,12 +2083,13 @@ GameObject:
   - component: {fileID: 873383779}
   - component: {fileID: 873383778}
   - component: {fileID: 873383782}
+  - component: {fileID: 873383783}
   m_Layer: 0
   m_Name: Cube (7)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 4294967295
   m_IsActive: 1
 --- !u!65 &873383778
 BoxCollider:
@@ -2040,7 +2173,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 873383777}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 0d1044ad4f722d74abf0a2e33741e876, type: 3}
   m_Name: 
@@ -2049,6 +2182,22 @@ MonoBehaviour:
   m_Duration: 0.35
   m_Force: 0.1
   m_MaxDistance: 1.5
+--- !u!54 &873383783
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 873383777}
+  serializedVersion: 2
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_UseGravity: 0
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 1
 --- !u!1 &1007847039
 GameObject:
   m_ObjectHideFlags: 0
@@ -2060,7 +2209,7 @@ GameObject:
   - component: {fileID: 1007847040}
   - component: {fileID: 1007847043}
   - component: {fileID: 1007847042}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Carro (2)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2139,12 +2288,13 @@ GameObject:
   - component: {fileID: 1028709692}
   - component: {fileID: 1028709691}
   - component: {fileID: 1028709695}
+  - component: {fileID: 1028709696}
   m_Layer: 0
   m_Name: Cube (6)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 4294967295
   m_IsActive: 1
 --- !u!65 &1028709691
 BoxCollider:
@@ -2225,7 +2375,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1028709690}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 0d1044ad4f722d74abf0a2e33741e876, type: 3}
   m_Name: 
@@ -2234,6 +2384,22 @@ MonoBehaviour:
   m_Duration: 0.35
   m_Force: 0.1
   m_MaxDistance: 1.5
+--- !u!54 &1028709696
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1028709690}
+  serializedVersion: 2
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_UseGravity: 0
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 1
 --- !u!1 &1098794002
 GameObject:
   m_ObjectHideFlags: 0
@@ -2373,6 +2539,36 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1108711613}
   m_Mesh: {fileID: 10206, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!1 &1129600099
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1129600100}
+  m_Layer: 0
+  m_Name: GameObject (1)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1129600100
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1129600099}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -1.88, y: 0.31, z: -1.69}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 7
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1144868777
 GameObject:
   m_ObjectHideFlags: 0
@@ -2477,7 +2673,7 @@ GameObject:
   - component: {fileID: 1239697411}
   - component: {fileID: 1239697410}
   - component: {fileID: 1239697409}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Cylinder (3)
   m_TagString: Object
   m_Icon: {fileID: 0}
@@ -2585,7 +2781,7 @@ GameObject:
   - component: {fileID: 1289427785}
   - component: {fileID: 1289427784}
   - component: {fileID: 1289427783}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Cube
   m_TagString: Object
   m_Icon: {fileID: 0}
@@ -2768,7 +2964,7 @@ GameObject:
   - component: {fileID: 1332762230}
   - component: {fileID: 1332762229}
   - component: {fileID: 1332762228}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Cylinder (1)
   m_TagString: Object
   m_Icon: {fileID: 0}
@@ -3033,12 +3229,13 @@ GameObject:
   - component: {fileID: 1386670964}
   - component: {fileID: 1386670963}
   - component: {fileID: 1386670967}
-  m_Layer: 0
+  - component: {fileID: 1386670968}
+  m_Layer: 9
   m_Name: Cube (2)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 4294967295
   m_IsActive: 1
 --- !u!65 &1386670963
 BoxCollider:
@@ -3122,7 +3319,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1386670962}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 0d1044ad4f722d74abf0a2e33741e876, type: 3}
   m_Name: 
@@ -3131,6 +3328,52 @@ MonoBehaviour:
   m_Duration: 0.35
   m_Force: 0.1
   m_MaxDistance: 1.5
+--- !u!54 &1386670968
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1386670962}
+  serializedVersion: 2
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_UseGravity: 0
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 1
+--- !u!1 &1462622542
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1462622543}
+  m_Layer: 0
+  m_Name: GameObject
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1462622543
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1462622542}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -16.41, y: 0.31, z: -1.69}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 6
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1586403668
 GameObject:
   m_ObjectHideFlags: 0
@@ -3174,12 +3417,13 @@ GameObject:
   - component: {fileID: 1755748724}
   - component: {fileID: 1755748723}
   - component: {fileID: 1755748727}
+  - component: {fileID: 1755748728}
   m_Layer: 0
   m_Name: Cube (10)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 4294967295
   m_IsActive: 1
 --- !u!65 &1755748723
 BoxCollider:
@@ -3260,7 +3504,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1755748722}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 0d1044ad4f722d74abf0a2e33741e876, type: 3}
   m_Name: 
@@ -3269,6 +3513,22 @@ MonoBehaviour:
   m_Duration: 0.35
   m_Force: 0.1
   m_MaxDistance: 1.5
+--- !u!54 &1755748728
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1755748722}
+  serializedVersion: 2
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_UseGravity: 0
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 1
 --- !u!1 &1873251587
 GameObject:
   m_ObjectHideFlags: 0
@@ -3282,12 +3542,13 @@ GameObject:
   - component: {fileID: 1873251589}
   - component: {fileID: 1873251588}
   - component: {fileID: 1873251592}
-  m_Layer: 0
+  - component: {fileID: 1873251593}
+  m_Layer: 9
   m_Name: Cube
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 4294967295
   m_IsActive: 1
 --- !u!65 &1873251588
 BoxCollider:
@@ -3371,7 +3632,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1873251587}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 0d1044ad4f722d74abf0a2e33741e876, type: 3}
   m_Name: 
@@ -3380,6 +3641,22 @@ MonoBehaviour:
   m_Duration: 0.35
   m_Force: 0.1
   m_MaxDistance: 1.5
+--- !u!54 &1873251593
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1873251587}
+  serializedVersion: 2
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_UseGravity: 0
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 1
 --- !u!1 &1875361574
 GameObject:
   m_ObjectHideFlags: 0
@@ -3489,6 +3766,36 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1875361574}
   m_Mesh: {fileID: 10206, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!1 &1876594234
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1876594235}
+  m_Layer: 0
+  m_Name: GameObject (2)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1876594235
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1876594234}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 12.52, y: 0.31, z: -1.69}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 8
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1929929132
 GameObject:
   m_ObjectHideFlags: 0
@@ -3541,7 +3848,7 @@ GameObject:
   - component: {fileID: 1944754580}
   - component: {fileID: 1944754583}
   - component: {fileID: 1944754582}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Carro (4)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3698,7 +4005,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1949974581}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalRotation: {x: -0, y: 0.99996305, z: -0, w: -0.008602114}
   m_LocalPosition: {x: -2.71, y: 0.42000002, z: -8.25}
   m_LocalScale: {x: 1.25, y: 0.19367, z: 1.5}
   m_Children:
@@ -3712,7 +4019,7 @@ Transform:
   - {fileID: 408193181}
   m_Father: {fileID: 0}
   m_RootOrder: 2
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 180.986, z: 0}
 --- !u!114 &1949974586
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3855,8 +4162,10 @@ GameObject:
   - component: {fileID: 2083913355}
   - component: {fileID: 2083913354}
   - component: {fileID: 2083913353}
+  - component: {fileID: 2083913358}
+  - component: {fileID: 2083913357}
   m_Layer: 0
-  m_Name: Seguridad
+  m_Name: QuarterBack
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -3929,12 +4238,55 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2083913352}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -15.9, y: 0.74, z: -3.63}
+  m_LocalPosition: {x: -15.52, y: 1.18, z: -11.91}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &2083913357
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2083913352}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3eadc21cb361f6d4a8421c50fd39d85c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_PointsOfMov:
+  - {fileID: 8241613}
+  - {fileID: 1876594234}
+  - {fileID: 1129600099}
+  - {fileID: 1462622542}
+  m_LayerMask:
+    serializedVersion: 2
+    m_Bits: 567
+  playerT: {fileID: 842508662}
+--- !u!195 &2083913358
+NavMeshAgent:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2083913352}
+  m_Enabled: 1
+  m_AgentTypeID: 0
+  m_Radius: 0.5
+  m_Speed: 3.5
+  m_Acceleration: 8
+  avoidancePriority: 50
+  m_AngularSpeed: 120
+  m_StoppingDistance: 0
+  m_AutoTraverseOffMeshLink: 1
+  m_AutoBraking: 1
+  m_AutoRepath: 1
+  m_Height: 2
+  m_BaseOffset: 1
+  m_WalkableMask: 4294967295
+  m_ObstacleAvoidanceType: 4
 --- !u!1 &2117214168
 GameObject:
   m_ObjectHideFlags: 0
@@ -3948,7 +4300,7 @@ GameObject:
   - component: {fileID: 2117214172}
   - component: {fileID: 2117214171}
   - component: {fileID: 2117214170}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Cylinder (2)
   m_TagString: Object
   m_Icon: {fileID: 0}
