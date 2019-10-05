@@ -26,7 +26,7 @@ public class CartController : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-
+        transform.position = box.transform.position;//SEGUIR AL COLLIDER
     }
 
     // Update is called once per frame
@@ -35,7 +35,16 @@ public class CartController : MonoBehaviour
         transform.position = box.transform.position;//SEGUIR AL COLLIDER
 
         if (Input.GetKey(KeyCode.W))
+        {
             speed = acceleration;
+
+
+            for (int i = 0; i < 2; i++)
+            {
+                ruedasDelanteras.GetChild(i).localEulerAngles += new Vector3(0, 0, box.velocity.magnitude / 2);
+                ruedasTraseras.GetChild(i).localEulerAngles += new Vector3(0, 0, box.velocity.magnitude / 2);
+            }
+        }
 
         float horizontalDir = Input.GetAxis("Horizontal");
         if (horizontalDir != 0)
@@ -58,15 +67,9 @@ public class CartController : MonoBehaviour
         rotation = 0f;
 
         
-        #region Ruedas
         ruedasDelanteras.localEulerAngles = new Vector3(-(horizontalDir * 20), 0, ruedasDelanteras.localEulerAngles.z);//gira rueda
+        ruedasTraseras.localEulerAngles = new Vector3(-(horizontalDir * 20), 0, ruedasTraseras.localEulerAngles.z);//gira rueda
 
-        for (int i = 0; i < 2; i++)
-        {
-            ruedasDelanteras.GetChild(i).localEulerAngles += new Vector3(0, 0, box.velocity.magnitude / 2);
-            ruedasTraseras.GetChild(i).localEulerAngles += new Vector3(0, 0, box.velocity.magnitude / 2);
-        }
-        #endregion
     }
 
     private void Rotate(int _direction, float _absoulteDir)
