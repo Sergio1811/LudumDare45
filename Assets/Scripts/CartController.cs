@@ -92,7 +92,7 @@ public class CartController : MonoBehaviour
     private void FixedUpdate()
     {
         box.AddForce(cartModel.transform.up * currentSpeed, ForceMode.Acceleration);//forward acceleration
-        box.AddForce(Vector3.down * gravity, ForceMode.Acceleration);//gravedad
+        //box.AddForce(Vector3.down * gravity, ForceMode.Acceleration);//gravedad
 
         //giro
         transform.eulerAngles = Vector3.Lerp(transform.eulerAngles, new Vector3(0, transform.eulerAngles.y + currentRotation, 0), Time.deltaTime * 5f);
