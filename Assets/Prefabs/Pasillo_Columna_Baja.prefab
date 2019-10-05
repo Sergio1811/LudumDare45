@@ -1,5 +1,31 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
+--- !u!65 &1105151385933164381
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1143657890647761282}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 100, y: 100, z: 100.00001}
+  m_Center: {x: 0, y: 50, z: 0.0000038146973}
+--- !u!65 &8872260956953632987
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1589450151764024211}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 100, y: 100, z: 100}
+  m_Center: {x: 0, y: 50, z: -50}
 --- !u!1 &1705010713024848555
 GameObject:
   m_ObjectHideFlags: 0
@@ -37,6 +63,19 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!65 &6755469508909896190
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4495204376977935211}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 100, y: 100, z: 100.00001}
+  m_Center: {x: 0, y: 50, z: 0.0000038146973}
 --- !u!1 &4698148083015720957
 GameObject:
   m_ObjectHideFlags: 0
@@ -79,7 +118,7 @@ Light:
   serializedVersion: 9
   m_Type: 2
   m_Color: {r: 0.9411765, g: 0.9372549, b: 1, a: 1}
-  m_Intensity: 2
+  m_Intensity: 1
   m_Range: 10
   m_SpotAngle: 30
   m_InnerSpotAngle: 21.80208
@@ -128,6 +167,32 @@ Light:
   m_UseBoundingSphereOverride: 0
   m_ShadowRadius: 0
   m_ShadowAngle: 0
+--- !u!65 &8292644093752481576
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7358524044209648607}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 100, y: 100, z: 100}
+  m_Center: {x: 0, y: 50, z: -50}
+--- !u!65 &3954179570519812016
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7985209728376989971}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 1, y: 1.0000002, z: 6.123235e-17}
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!1001 &1531038845582584534
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -197,6 +262,12 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 5a61c503a263f5942aeb5c19a1219bca, type: 3}
+--- !u!1 &7358524044209648607 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: -927199367670048503, guid: 5a61c503a263f5942aeb5c19a1219bca,
+    type: 3}
+  m_PrefabInstance: {fileID: 1531038845582584534}
+  m_PrefabAsset: {fileID: 0}
 --- !u!4 &5784279406899855820 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: -4216859302048453862, guid: 5a61c503a263f5942aeb5c19a1219bca,
@@ -272,6 +343,12 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 1bc56ac12476c6b46a4d401a81ceaf9e, type: 3}
+--- !u!1 &4495204376977935211 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: -927199367670048503, guid: 1bc56ac12476c6b46a4d401a81ceaf9e,
+    type: 3}
+  m_PrefabInstance: {fileID: 5567506346108146274}
+  m_PrefabAsset: {fileID: 0}
 --- !u!4 &592633780709882232 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: -4216859302048453862, guid: 1bc56ac12476c6b46a4d401a81ceaf9e,
@@ -355,8 +432,15 @@ PrefabInstance:
       propertyPath: m_LocalScale.y
       value: 3
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 4866993748532303997, guid: 1c9d3f8972f57854ea3098af6aa5e660, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 1c9d3f8972f57854ea3098af6aa5e660, type: 3}
+--- !u!1 &7985209728376989971 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 4141200962953184290, guid: 1c9d3f8972f57854ea3098af6aa5e660,
+    type: 3}
+  m_PrefabInstance: {fileID: 6316766480389369137}
+  m_PrefabAsset: {fileID: 0}
 --- !u!4 &2785249642981177825 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 8146616375987590352, guid: 1c9d3f8972f57854ea3098af6aa5e660,
@@ -432,6 +516,12 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 5a61c503a263f5942aeb5c19a1219bca, type: 3}
+--- !u!1 &1589450151764024211 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: -927199367670048503, guid: 5a61c503a263f5942aeb5c19a1219bca,
+    type: 3}
+  m_PrefabInstance: {fileID: 7291100659684377242}
+  m_PrefabAsset: {fileID: 0}
 --- !u!4 &2329915326143342976 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: -4216859302048453862, guid: 5a61c503a263f5942aeb5c19a1219bca,
@@ -515,7 +605,8 @@ PrefabInstance:
       propertyPath: m_LocalScale.y
       value: 3
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 4866993748532303997, guid: 1c9d3f8972f57854ea3098af6aa5e660, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 1c9d3f8972f57854ea3098af6aa5e660, type: 3}
 --- !u!4 &2143967403695906677 stripped
 Transform:
@@ -592,6 +683,12 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 1bc56ac12476c6b46a4d401a81ceaf9e, type: 3}
+--- !u!1 &1143657890647761282 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: -927199367670048503, guid: 1bc56ac12476c6b46a4d401a81ceaf9e,
+    type: 3}
+  m_PrefabInstance: {fileID: 9006913229828307083}
+  m_PrefabAsset: {fileID: 0}
 --- !u!4 &4144524496406516625 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: -4216859302048453862, guid: 1bc56ac12476c6b46a4d401a81ceaf9e,
