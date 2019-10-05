@@ -56,8 +56,8 @@ public class CameraController : MonoBehaviour
                 else if (distance > maxDistance)
                 {
                     distance = maxDistance;
-                    currentSpeed = 22;
-                    limitSpeed = 4f * (player.gameObject.transform.position - myCamera.transform.position).magnitude;
+                    currentSpeed = 40;
+                    limitSpeed = 5f * (player.gameObject.transform.position - myCamera.transform.position).magnitude;
 
                 }
             }
@@ -78,7 +78,6 @@ public class CameraController : MonoBehaviour
                 going = false;
             }
         }
-        print(distance);
         myCamera.transform.forward = (looker.position - gameObject.transform.position).normalized;
     }
 
