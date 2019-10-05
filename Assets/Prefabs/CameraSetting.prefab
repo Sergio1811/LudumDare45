@@ -136,8 +136,8 @@ MonoBehaviour:
   goToPosition: {fileID: 3866513952901028542}
   looker: {fileID: 0}
   minDistance: 8
-  maxDistance: 12
-  acceleratePerSecond: 100
+  maxDistance: 16
+  acceleratePerSecond: 70
   layerMask:
     serializedVersion: 2
     m_Bits: 0
