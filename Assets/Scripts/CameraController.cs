@@ -34,15 +34,16 @@ public class CameraController : MonoBehaviour
 
     private void FixedUpdate()
     {
-        if (!player.girando && !going)
+        float distance = (player.gameObject.transform.position - myCamera.transform.position).magnitude;
+        if (!player.girando && !going && (distance < maxDistance && distance > minDistance))
         {
+            currentSpeed = 22;
             myCamera.transform.position = Vector3.MoveTowards(myCamera.transform.position, transformPositionCamera.transform.position, currentSpeed * Time.deltaTime);
         }
-        else if(player.girando)
+        else if(player.girando || distance < maxDistance || distance > minDistance)
         {
             if(!going)
                 currentSpeed = 0;
-            float distance = (player.gameObject.transform.position - myCamera.transform.position).magnitude;
             limitSpeed = 2f * (player.gameObject.transform.position - myCamera.transform.position).magnitude;
 
             if (distance > maxDistance || distance < minDistance)
@@ -55,8 +56,8 @@ public class CameraController : MonoBehaviour
                 else if (distance > maxDistance)
                 {
                     distance = maxDistance;
-                    currentSpeed = 20;
-                    limitSpeed = 3.5f * (player.gameObject.transform.position - myCamera.transform.position).magnitude;
+                    currentSpeed = 22;
+                    limitSpeed = 4f * (player.gameObject.transform.position - myCamera.transform.position).magnitude;
 
                 }
             }
@@ -77,6 +78,7 @@ public class CameraController : MonoBehaviour
                 going = false;
             }
         }
+        print(distance);
         myCamera.transform.forward = (looker.position - gameObject.transform.position).normalized;
     }
 

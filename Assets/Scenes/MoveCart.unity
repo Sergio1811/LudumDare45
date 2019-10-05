@@ -517,16 +517,6 @@ PrefabInstance:
       propertyPath: looker
       value: 
       objectReference: {fileID: 599403942}
-    - target: {fileID: 3866513952838888753, guid: f0448989abbd9da488185d689d76744b,
-        type: 3}
-      propertyPath: maxDistance
-      value: 16
-      objectReference: {fileID: 0}
-    - target: {fileID: 3866513952838888753, guid: f0448989abbd9da488185d689d76744b,
-        type: 3}
-      propertyPath: acceleratePerSecond
-      value: 70
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f0448989abbd9da488185d689d76744b, type: 3}
 --- !u!1001 &6745914135922588026
