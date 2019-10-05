@@ -272,7 +272,6 @@ GameObject:
   - component: {fileID: 667726719}
   - component: {fileID: 667726718}
   - component: {fileID: 667726717}
-  - component: {fileID: 667726720}
   m_Layer: 2
   m_Name: Carro
   m_TagString: Untagged
@@ -303,7 +302,7 @@ BoxCollider:
   m_GameObject: {fileID: 667726715}
   m_Material: {fileID: 0}
   m_IsTrigger: 0
-  m_Enabled: 1
+  m_Enabled: 0
   serializedVersion: 2
   m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
@@ -352,22 +351,6 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 667726715}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
---- !u!54 &667726720
-Rigidbody:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 667726715}
-  serializedVersion: 2
-  m_Mass: 300
-  m_Drag: 2
-  m_AngularDrag: 0
-  m_UseGravity: 1
-  m_IsKinematic: 0
-  m_Interpolate: 0
-  m_Constraints: 0
-  m_CollisionDetection: 0
 --- !u!1 &867022003
 GameObject:
   m_ObjectHideFlags: 0
@@ -429,7 +412,6 @@ Transform:
   m_Children:
   - {fileID: 1130380733}
   - {fileID: 2137079520}
-  - {fileID: 1711875476}
   m_Father: {fileID: 0}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -463,6 +445,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 469931856}
+  - {fileID: 1711875476}
   m_Father: {fileID: 1001783144}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -492,7 +475,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   cartModel: {fileID: 1747272119}
-  box: {fileID: 667726720}
+  box: {fileID: 2137079522}
   cartNormal: {fileID: 469931856}
   steering: 80
   acceleration: 30
@@ -804,12 +787,12 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1711875475}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 1.25, z: -4.57}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
-  m_Father: {fileID: 1001783144}
-  m_RootOrder: 2
+  m_Father: {fileID: 1130380733}
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!81 &1711875477
 AudioListener:
@@ -1059,6 +1042,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2137079520}
   - component: {fileID: 2137079521}
+  - component: {fileID: 2137079522}
   m_Layer: 2
   m_Name: Collider
   m_TagString: Untagged
@@ -1093,3 +1077,19 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!54 &2137079522
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2137079519}
+  serializedVersion: 2
+  m_Mass: 300
+  m_Drag: 2
+  m_AngularDrag: 0
+  m_UseGravity: 1
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 0

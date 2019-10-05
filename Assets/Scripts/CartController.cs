@@ -56,13 +56,13 @@ public class CartController : MonoBehaviour
         currentRotation = Mathf.Lerp(currentRotation, rotation, Time.deltaTime * 4f);
         rotation = 0f;
 
-        cartModel.localEulerAngles = Vector3.Lerp(cartModel.localEulerAngles, new Vector3(0, 90 + (horizontalDir * 15), cartModel.localEulerAngles.z), 0.2f);
-
+        cartModel.localEulerAngles = Vector3.Lerp(cartModel.localEulerAngles, new Vector3(0, (horizontalDir * 15), cartModel.localEulerAngles.z), 0.2f);
+        /*
         #region Ruedas
         frontWheels.localEulerAngles = new Vector3(0, (horizontalDir * 15), frontWheels.localEulerAngles.z);
         frontWheels.localEulerAngles += new Vector3(0, 0, box.velocity.magnitude / 2);
         backWheels.localEulerAngles += new Vector3(0, 0, box.velocity.magnitude / 2);
-        #endregion
+        #endregion*/
     }
 
     private void Rotate(int _direction, float _absoulteDir)
