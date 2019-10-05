@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 3592660298717976391}
   - component: {fileID: 5512607424331443569}
   - component: {fileID: 2286771248237056392}
+  - component: {fileID: 8589604662519182306}
   m_Layer: 0
   m_Name: estanteria (208)
   m_TagString: Untagged
@@ -77,6 +78,19 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
+--- !u!65 &8589604662519182306
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 540687424908240212}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 100, y: 250, z: 100.00001}
+  m_Center: {x: 50, y: 125, z: -49.999996}
 --- !u!1 &2291479040991963295
 GameObject:
   m_ObjectHideFlags: 0
@@ -88,6 +102,7 @@ GameObject:
   - component: {fileID: 2997042012819217036}
   - component: {fileID: 6110442876495061178}
   - component: {fileID: 572007733382224963}
+  - component: {fileID: 2315188401683266806}
   m_Layer: 0
   m_Name: estanteria (207)
   m_TagString: Untagged
@@ -154,6 +169,19 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
+--- !u!65 &2315188401683266806
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2291479040991963295}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 100, y: 250, z: 100.00001}
+  m_Center: {x: 50, y: 125, z: -49.999996}
 --- !u!1 &3385522851581920493
 GameObject:
   m_ObjectHideFlags: 0
@@ -256,6 +284,7 @@ GameObject:
   - component: {fileID: 7191196262116400793}
   - component: {fileID: 2204305692995593391}
   - component: {fileID: 5596792576630085718}
+  - component: {fileID: 7687776242550585557}
   m_Layer: 0
   m_Name: suelo (39)
   m_TagString: Untagged
@@ -322,6 +351,19 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
+--- !u!65 &7687776242550585557
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6167428170862980234}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 300, y: 0, z: 300}
+  m_Center: {x: -150, y: 0, z: -149.47192}
 --- !u!1 &8068164641338832118
 GameObject:
   m_ObjectHideFlags: 0
@@ -333,6 +375,7 @@ GameObject:
   - component: {fileID: 6461743139903817445}
   - component: {fileID: 2663808370427296979}
   - component: {fileID: 8632053524765343786}
+  - component: {fileID: 7201739593124641788}
   m_Layer: 0
   m_Name: estanteria (209)
   m_TagString: Untagged
@@ -399,6 +442,19 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
+--- !u!65 &7201739593124641788
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8068164641338832118}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 100, y: 250, z: 100.00001}
+  m_Center: {x: 50, y: 125, z: -49.999996}
 --- !u!1 &8824242691673202196
 GameObject:
   m_ObjectHideFlags: 0
