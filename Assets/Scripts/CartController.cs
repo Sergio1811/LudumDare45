@@ -32,7 +32,7 @@ public class CartController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        transform.position = box.transform.position - new Vector3(0, 0.4f, 0);//SEGUIR AL COLLIDER
+        transform.position = box.transform.position;//SEGUIR AL COLLIDER
 
         if (Input.GetKey(KeyCode.W))
             speed = acceleration;
@@ -40,11 +40,12 @@ public class CartController : MonoBehaviour
         float horizontalDir = Input.GetAxis("Horizontal");
         if (horizontalDir != 0)
         {
-            int direction;
+            int direction = 0;
 
             if (horizontalDir > 0)
                 direction = 1;
-            else direction = -1;
+            else if (horizontalDir < 0)
+                direction = -1;
 
             float absoluteDirection = Mathf.Abs(horizontalDir);
             Rotate(direction, absoluteDirection);
@@ -56,7 +57,6 @@ public class CartController : MonoBehaviour
         currentRotation = Mathf.Lerp(currentRotation, rotation, Time.deltaTime * 4f);
         rotation = 0f;
 
-        cartModel.localEulerAngles = Vector3.Lerp(cartModel.localEulerAngles, new Vector3(0, (horizontalDir * 15), cartModel.localEulerAngles.z), 0.2f);
         /*
         #region Ruedas
         frontWheels.localEulerAngles = new Vector3(0, (horizontalDir * 15), frontWheels.localEulerAngles.z);
@@ -67,24 +67,21 @@ public class CartController : MonoBehaviour
 
     private void Rotate(int _direction, float _absoulteDir)
     {
-        rotation = steering * _direction * _absoulteDir;
+        rotation = (steering * _direction) * _absoulteDir;
     }
 
     private void FixedUpdate()
     {
-        box.AddForce(-cartModel.transform.right * currentSpeed, ForceMode.Acceleration);//forward acceleration
+        box.AddForce(cartModel.transform.forward * currentSpeed, ForceMode.Acceleration);//forward acceleration
         box.AddForce(Vector3.down * gravity, ForceMode.Acceleration);//gravedad
 
         //giro
         transform.eulerAngles = Vector3.Lerp(transform.eulerAngles, new Vector3(0, transform.eulerAngles.y + currentRotation, 0), Time.deltaTime * 5f);
+        box.transform.eulerAngles = Vector3.Lerp(box.transform.eulerAngles, new Vector3(0, box.transform.eulerAngles.y + currentRotation, 0), Time.deltaTime * 5f);
 
-        RaycastHit tocandoSuelo;
         RaycastHit proximoSuelo;
-        Physics.Raycast(transform.position + (transform.up * .1f), Vector3.down, out tocandoSuelo, 1.1f, layerMask);
         Physics.Raycast(transform.position + (transform.up * .1f), Vector3.down, out proximoSuelo, 2.0f, layerMask);
 
-        cartNormal.up = Vector3.Lerp(cartNormal.up, proximoSuelo.normal, Time.deltaTime * 8.0f);
-        cartNormal.Rotate(0, transform.eulerAngles.y, 0);//girar en el aire?
 
 
     }
