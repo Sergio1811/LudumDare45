@@ -138,8 +138,8 @@ MonoBehaviour:
   cartModel: {fileID: 6745914135249615053}
   box: {fileID: 6745914135496787864}
   cartNormal: {fileID: 6745914135989530154}
-  steering: 70
-  acceleration: 55
+  steering: 50
+  acceleration: 50
   gravity: 10
   layerMask:
     serializedVersion: 2
@@ -397,7 +397,7 @@ Rigidbody:
   m_UseGravity: 1
   m_IsKinematic: 0
   m_Interpolate: 0
-  m_Constraints: 80
+  m_Constraints: 84
   m_CollisionDetection: 0
 --- !u!65 &1255456642
 BoxCollider:

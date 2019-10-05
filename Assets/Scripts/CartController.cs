@@ -46,6 +46,17 @@ public class CartController : MonoBehaviour
                 ruedasTraseras.GetChild(i).localEulerAngles += new Vector3(0, 0, box.velocity.magnitude / 2);
             }
         }
+        else if (Input.GetKey(KeyCode.S))
+        {
+            speed = acceleration;
+
+
+            for (int i = 0; i < 2; i++)
+            {
+                ruedasDelanteras.GetChild(i).localEulerAngles += new Vector3(0, 0, box.velocity.magnitude / 2);
+                ruedasTraseras.GetChild(i).localEulerAngles += new Vector3(0, 0, box.velocity.magnitude / 2);
+            }
+        }
 
         float horizontalDir = Input.GetAxis("Horizontal");
         if (horizontalDir != 0)
