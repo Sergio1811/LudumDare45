@@ -16,7 +16,7 @@ public class CameraController : MonoBehaviour
     public float maxDistance = 8;
 
     private float currentSpeed = 50;
-    private float limitSpeed = 0;
+    private float limitSpeed = 1.5f;
     public float acceleratePerSecond = 10f;
 
     public LayerMask layerMask;
@@ -40,16 +40,17 @@ public class CameraController : MonoBehaviour
         }
         else if(player.girando)
         {
-            currentSpeed = 0;
+            if(!going)
+                currentSpeed = 0;
             float distance = (player.gameObject.transform.position - myCamera.transform.position).magnitude;
-            limitSpeed = 0.5f * (player.gameObject.transform.position - myCamera.transform.position).magnitude;
+            limitSpeed = 2f * (player.gameObject.transform.position - myCamera.transform.position).magnitude;
 
             if (distance > maxDistance || distance < minDistance)
             {
                 if (distance < minDistance)
                 {
                     distance = minDistance;
-                    limitSpeed = 0.2f * (player.gameObject.transform.position - myCamera.transform.position).magnitude;
+                    limitSpeed = 2f * (player.gameObject.transform.position - myCamera.transform.position).magnitude;
                 }
                 else if (distance > maxDistance)
                 {
@@ -61,7 +62,7 @@ public class CameraController : MonoBehaviour
             }
             goToPosition.position = (transformPositionCamera.transform.position - player.gameObject.transform.position).normalized * distance + player.gameObject.transform.position; //cambiar chequeando la posición
             going = true;
-            limitSpeed = 3.5f * (player.gameObject.transform.position - myCamera.transform.position).magnitude;
+            //limitSpeed = 3.5f * (player.gameObject.transform.position - myCamera.transform.position).magnitude;
 
 
         }
@@ -71,7 +72,7 @@ public class CameraController : MonoBehaviour
             if (currentSpeed > limitSpeed)
                 currentSpeed = limitSpeed;
             myCamera.transform.position = Vector3.MoveTowards(myCamera.transform.position, goToPosition.transform.position, currentSpeed * Time.deltaTime);
-            if ((myCamera.transform.position - goToPosition.transform.position).magnitude < 1f)
+            if ((myCamera.transform.position - goToPosition.transform.position).magnitude < 0.05f)
             {
                 going = false;
             }
