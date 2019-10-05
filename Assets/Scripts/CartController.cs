@@ -21,8 +21,8 @@ public class CartController : MonoBehaviour
     public LayerMask layerMask;
 
     [Header("Model Parts")]
-    public Transform frontWheels;
-    public Transform backWheels;
+    public Transform ruedasDelanteras;
+    public Transform ruedasTraseras;
     // Start is called before the first frame update
     void Start()
     {
@@ -57,12 +57,16 @@ public class CartController : MonoBehaviour
         currentRotation = Mathf.Lerp(currentRotation, rotation, Time.deltaTime * 4f);
         rotation = 0f;
 
-        /*
+        
         #region Ruedas
-        frontWheels.localEulerAngles = new Vector3(0, (horizontalDir * 15), frontWheels.localEulerAngles.z);
-        frontWheels.localEulerAngles += new Vector3(0, 0, box.velocity.magnitude / 2);
-        backWheels.localEulerAngles += new Vector3(0, 0, box.velocity.magnitude / 2);
-        #endregion*/
+        ruedasDelanteras.localEulerAngles = new Vector3(-(horizontalDir * 20), 0, ruedasDelanteras.localEulerAngles.z);//gira rueda
+
+        for (int i = 0; i < 2; i++)
+        {
+            ruedasDelanteras.GetChild(i).localEulerAngles += new Vector3(0, 0, box.velocity.magnitude / 2);
+            ruedasTraseras.GetChild(i).localEulerAngles += new Vector3(0, 0, box.velocity.magnitude / 2);
+        }
+        #endregion
     }
 
     private void Rotate(int _direction, float _absoulteDir)
@@ -72,12 +76,12 @@ public class CartController : MonoBehaviour
 
     private void FixedUpdate()
     {
-        box.AddForce(cartModel.transform.forward * currentSpeed, ForceMode.Acceleration);//forward acceleration
+        box.AddForce(cartModel.transform.up * currentSpeed, ForceMode.Acceleration);//forward acceleration
         box.AddForce(Vector3.down * gravity, ForceMode.Acceleration);//gravedad
 
         //giro
         transform.eulerAngles = Vector3.Lerp(transform.eulerAngles, new Vector3(0, transform.eulerAngles.y + currentRotation, 0), Time.deltaTime * 5f);
-        box.transform.eulerAngles = Vector3.Lerp(box.transform.eulerAngles, new Vector3(0, box.transform.eulerAngles.y + currentRotation, 0), Time.deltaTime * 5f);
+        box.transform.eulerAngles = transform.eulerAngles;
 
         RaycastHit proximoSuelo;
         Physics.Raycast(transform.position + (transform.up * .1f), Vector3.down, out proximoSuelo, 2.0f, layerMask);
