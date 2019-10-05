@@ -24,6 +24,8 @@ public class CartController : MonoBehaviour
     public Transform ruedasDelanteras;
     public Transform ruedasTraseras;
 
+    public bool girando = false;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -62,6 +64,7 @@ public class CartController : MonoBehaviour
         if (horizontalDir != 0)
         {
             int direction = 0;
+            girando = true;
 
             if (horizontalDir > 0)
                 direction = 1;
@@ -71,6 +74,8 @@ public class CartController : MonoBehaviour
             float absoluteDirection = Mathf.Abs(horizontalDir);
             Rotate(direction, absoluteDirection);
         }
+        else
+            girando = false;
 
         currentSpeed = Mathf.SmoothStep(currentSpeed, speed, Time.deltaTime * 12f);
         speed = 0f;
@@ -92,7 +97,7 @@ public class CartController : MonoBehaviour
     private void FixedUpdate()
     {
         box.AddForce(cartModel.transform.up * currentSpeed, ForceMode.Acceleration);//forward acceleration
-        box.AddForce(Vector3.down * gravity, ForceMode.Acceleration);//gravedad
+        //box.AddForce(Vector3.down * gravity, ForceMode.Acceleration);//gravedad
 
         //giro
         transform.eulerAngles = Vector3.Lerp(transform.eulerAngles, new Vector3(0, transform.eulerAngles.y + currentRotation, 0), Time.deltaTime * 5f);
