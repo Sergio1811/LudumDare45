@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class moveSphere : MonoBehaviour
 {
-    float speed = 5.0f;
+    float speed = 3.0f;
 
     // Start is called before the first frame update
     void Start()
@@ -21,11 +21,11 @@ public class moveSphere : MonoBehaviour
         }
         if (Input.GetKey(KeyCode.A))
         {
-            transform.position += Vector3.left * speed * Time.deltaTime;
+            transform.position += -transform.right * speed * Time.deltaTime;
         }
         if (Input.GetKey(KeyCode.D))
         {
-            transform.position += Vector3.right * speed * Time.deltaTime;
+            transform.position += transform.right * speed * Time.deltaTime;
         }
         if (Input.GetKey(KeyCode.S))
         {
