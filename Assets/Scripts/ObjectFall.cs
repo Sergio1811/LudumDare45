@@ -24,7 +24,8 @@ public class ObjectFall : MonoBehaviour
         print(l_Direction); 
         foreach (Rigidbody item in l_RigidBodies)
         {
-            item.AddForce(l_Direction*m_ExplosionForce, ForceMode.Impulse);
+            item.AddForce(l_Direction*Random.Range(m_ExplosionForce*0.8f,m_ExplosionForce*1.2f), ForceMode.Impulse);
+            item.transform.SetParent(null);
         }
 
 
