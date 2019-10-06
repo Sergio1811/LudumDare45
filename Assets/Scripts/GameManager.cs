@@ -28,7 +28,7 @@ public class GameManager : MonoBehaviour
 
     private void Start()
     {
-        m_Player = GameObject.FindGameObjectWithTag("Player");
+        m_Player = GameObject.Find("Cart");
         points = 0;
     }
 

@@ -24,9 +24,8 @@ public class CuboEstanteriaScript : MonoBehaviour
 
     public void ObjectFalling()
     {
-        print("entra");
         ObjetoEstanteria[] objEstant = GetComponentsInChildren<ObjetoEstanteria>();
-        Vector3 l_Direction = ((GameManager.Instance.m_Player.transform.position - this.transform.position).normalized  + Vector3.up).normalized;
+        Vector3 l_Direction = ((GameManager.Instance.m_Player.transform.position - gameObject.transform.position).normalized / 3  + Vector3.up).normalized;
 
         for (int i = 0; i < objEstant.Length; i++)
         {
