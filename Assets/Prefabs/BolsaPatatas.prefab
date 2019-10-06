@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 577291530564600585}
   - component: {fileID: 3275319085125247234}
   - component: {fileID: 6733836408878074213}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: BolsaPatatas (2)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -88,7 +88,7 @@ GameObject:
   - component: {fileID: 3288797545214798913}
   - component: {fileID: 6399534213390732914}
   - component: {fileID: 8145364174817696139}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: BolsaPatatas (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -165,7 +165,7 @@ GameObject:
   - component: {fileID: 4184889603802694096}
   - component: {fileID: 2286983817963880749}
   - component: {fileID: 8921270836139412006}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: BolsaPatatas (3)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -243,7 +243,7 @@ GameObject:
   - component: {fileID: 129011548560768949}
   - component: {fileID: 8086695158814230030}
   - component: {fileID: 899952875360732477}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: BolsaPatatas
   m_TagString: Object
   m_Icon: {fileID: 0}
@@ -315,7 +315,6 @@ MonoBehaviour:
   puntuacion: 0
   caido: 0
   rb: {fileID: 0}
-  gm: {fileID: 0}
   objetos: []
 --- !u!1 &9160594154039286820
 GameObject:
@@ -328,7 +327,7 @@ GameObject:
   - component: {fileID: 7325220123356195236}
   - component: {fileID: 4532160644476551152}
   - component: {fileID: 3436742180826787781}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: BolsaPatatas
   m_TagString: Untagged
   m_Icon: {fileID: 0}

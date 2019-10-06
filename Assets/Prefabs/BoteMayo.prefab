@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 4199088787109044822}
   - component: {fileID: 8508477653616100737}
   - component: {fileID: 1199709871979728597}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: Bote_Mayo_low (3)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -89,7 +89,7 @@ GameObject:
   - component: {fileID: 3697611022061684277}
   - component: {fileID: 8522026565866592689}
   - component: {fileID: 7462748237623738938}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: BoteMayo
   m_TagString: Object
   m_Icon: {fileID: 0}
@@ -161,7 +161,6 @@ MonoBehaviour:
   puntuacion: 1
   caido: 0
   rb: {fileID: 0}
-  gm: {fileID: 0}
   objetos: []
 --- !u!1 &2951309486160790515
 GameObject:
@@ -174,7 +173,7 @@ GameObject:
   - component: {fileID: 6183473035203859190}
   - component: {fileID: 5493947893832608687}
   - component: {fileID: 558241561300674653}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: Bote_Mayo_low (2)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -251,7 +250,7 @@ GameObject:
   - component: {fileID: 514327022595807828}
   - component: {fileID: 8603197462953573777}
   - component: {fileID: 6153320860601949756}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: Bote_Mayo_low
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -328,7 +327,7 @@ GameObject:
   - component: {fileID: 6318413207492984611}
   - component: {fileID: 5772759621050004054}
   - component: {fileID: 1295325186369959455}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: Bote_Mayo_low (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}

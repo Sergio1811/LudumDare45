@@ -27,7 +27,6 @@ public class CameraController : MonoBehaviour
     void Start()
     {
         maxDistanceReal = maxDistance;
-        minDistance = (looker.position - transformPositionCamera.position).magnitude;
     }
 
     // Update is called once per frame
@@ -41,12 +40,13 @@ public class CameraController : MonoBehaviour
         float distance = (player.gameObject.transform.position - myCamera.transform.position).magnitude;
         if (!player.girando && !going && (distance < maxDistance && distance > minDistance))
         {
-            currentSpeed = 22;
+            currentSpeed = 30;
+            limitSpeed = 10f * (player.gameObject.transform.position - myCamera.transform.position).magnitude;
             myCamera.transform.position = Vector3.MoveTowards(myCamera.transform.position, transformPositionCamera.transform.position, currentSpeed * Time.deltaTime);
         }
-        else if(player.girando || distance < maxDistance || distance > minDistance)
+        else if (player.girando || distance < maxDistance || distance > minDistance)
         {
-            if(!going)
+            if (!going)
                 currentSpeed = 0;
             limitSpeed = 2f * (player.gameObject.transform.position - myCamera.transform.position).magnitude;
 
@@ -54,20 +54,20 @@ public class CameraController : MonoBehaviour
             {
                 if (distance < minDistance)
                 {
+                    currentSpeed = 20;
                     distance = minDistance;
                     limitSpeed = 2f * (player.gameObject.transform.position - myCamera.transform.position).magnitude;
                 }
                 else if (distance > maxDistance)
                 {
                     distance = maxDistance;
-                    currentSpeed = 40;
-                    limitSpeed = 5f * (player.gameObject.transform.position - myCamera.transform.position).magnitude;
+                    currentSpeed = 30;
+                    limitSpeed = 10f * (player.gameObject.transform.position - myCamera.transform.position).magnitude;
 
                 }
             }
             goToPosition.position = (transformPositionCamera.transform.position - player.gameObject.transform.position).normalized * distance + player.gameObject.transform.position; //cambiar chequeando la posición
             going = true;
-            //limitSpeed = 3.5f * (player.gameObject.transform.position - myCamera.transform.position).magnitude;
 
 
         }
@@ -85,19 +85,6 @@ public class CameraController : MonoBehaviour
         myCamera.transform.forward = (looker.position - gameObject.transform.position).normalized;
     }
 
-    private bool CanGoToTransform(Transform _trans)
-    {
-        bool viable = true;
-
-        positionToTransforms = _trans;
-        positionToTransforms.transform.forward = (player.gameObject.transform.position - positionToTransforms.transform.position).normalized;
-        foreach (Transform item in transformsCamera)
-        {
-
-        }
-
-        return viable;
-    }
 
     public void CameraColliding()
     {
@@ -109,20 +96,15 @@ public class CameraController : MonoBehaviour
             print("Ray");
             if (l_RaycastHit.collider.gameObject.tag != "Player")
             {
-                myCamera.transform.position = l_RaycastHit.point + l_Direction.normalized * 0.2f;
-                goToPosition.position = l_RaycastHit.point + l_Direction.normalized * 0.2f;
-                maxDistance = (looker.position - l_RaycastHit.point + l_Direction.normalized * 0.2f).magnitude;
-                CameraColliding();
+                myCamera.transform.position = l_RaycastHit.point + l_Direction.normalized * 1.5f;
+                goToPosition.position = l_RaycastHit.point + l_Direction.normalized * 1.5f;
+                maxDistance = (looker.position - l_RaycastHit.point + l_Direction.normalized * 1.5f).magnitude;
             }
-            else
-                maxDistance = maxDistanceReal;
+        
+               
         }
- 
+        else maxDistance = maxDistanceReal;
 
-    }
 
-    private void OnDrawGizmos()
-    {
-        Gizmos.DrawRay(this.transform.position,(looker.transform.position - myCamera.transform.position));
     }
 }
