@@ -51,11 +51,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 3779570118066348537}
     m_Modifications:
-    - target: {fileID: 9158878129409851372, guid: bcca409729b1a794f9bf98057df47e13,
-        type: 3}
-      propertyPath: m_Name
-      value: Cereal
-      objectReference: {fileID: 0}
     - target: {fileID: 5278648650498018815, guid: bcca409729b1a794f9bf98057df47e13,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -74,22 +69,22 @@ PrefabInstance:
     - target: {fileID: 5278648650498018815, guid: bcca409729b1a794f9bf98057df47e13,
         type: 3}
       propertyPath: m_LocalRotation.x
-      value: -0
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5278648650498018815, guid: bcca409729b1a794f9bf98057df47e13,
         type: 3}
       propertyPath: m_LocalRotation.y
-      value: 0.70710576
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5278648650498018815, guid: bcca409729b1a794f9bf98057df47e13,
         type: 3}
       propertyPath: m_LocalRotation.z
-      value: -0
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5278648650498018815, guid: bcca409729b1a794f9bf98057df47e13,
         type: 3}
       propertyPath: m_LocalRotation.w
-      value: 0.70710784
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 5278648650498018815, guid: bcca409729b1a794f9bf98057df47e13,
         type: 3}
@@ -104,12 +99,17 @@ PrefabInstance:
     - target: {fileID: 5278648650498018815, guid: bcca409729b1a794f9bf98057df47e13,
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.y
-      value: 90.00001
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5278648650498018815, guid: bcca409729b1a794f9bf98057df47e13,
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 9158878129409851372, guid: bcca409729b1a794f9bf98057df47e13,
+        type: 3}
+      propertyPath: m_Name
+      value: Cereal
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: bcca409729b1a794f9bf98057df47e13, type: 3}
