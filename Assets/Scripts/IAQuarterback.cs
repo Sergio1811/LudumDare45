@@ -13,10 +13,8 @@ public class IAQuarterback : MonoBehaviour
     public GameObject[] m_PointsOfMov;
     public LayerMask m_LayerMask;
     public Animator myAnimator;
-
     public Transform copyPlayerPos;
-    public float m_ConeAngle = 60.0f;
-    //    public Transform playerT;
+   //    public Transform playerT;
 
     void Start()
     {
@@ -35,9 +33,8 @@ public class IAQuarterback : MonoBehaviour
 
             case State.Searching:
 
-                /*RaycastHit l_Hit;
+                RaycastHit l_Hit;
                 Ray ray = new Ray(gameObject.transform.position, (copyPlayerPos.position - gameObject.transform.position).normalized);
-                Debug.DrawRay(gameObject.transform.position, copyPlayerPos.position - gameObject.transform.position);
 
                 if (Physics.Raycast(ray, out l_Hit, m_LayerMask))
                 {
@@ -50,15 +47,9 @@ public class IAQuarterback : MonoBehaviour
                        // ChangeState(m_CurrentState, State.Attack);
                         StartCoroutine(WaitSeconds(0.2f));
                     }
-                }*/
-
-                if (SeesPlayer())
-                {
-                    StartCoroutine(WaitSeconds(0.2f));
-                    print("pajarito");
                 }
 
-                if (Vector3.Distance(m_NextDestino, m_NMAgent.transform.position)<1.0f)
+                if(Vector3.Distance(m_NextDestino, m_NMAgent.transform.position)<1.0f)
                 {
                     NearerPointToBoth();
                     m_NMAgent.SetDestination(m_NextDestino);
@@ -115,19 +106,6 @@ public class IAQuarterback : MonoBehaviour
         m_CurrentState = l_NextState;
     }
 
-    bool SeesPlayer()
-    {
-        Vector3 l_Direction = GameManager.Instance.m_Player.transform.position - transform.position;
-        Ray l_Ray = new Ray(transform.position, l_Direction);
-        float l_Distance = l_Direction.magnitude;
-        l_Direction /= l_Distance;
-        bool l_Collides = Physics.Raycast(l_Ray, l_Distance, m_LayerMask);
-        float l_DotAngle = Vector3.Dot(l_Direction, transform.forward);
-
-        Debug.DrawRay(transform.position, l_Direction * l_Distance, l_Collides ? Color.red : Color.yellow);
-        return !l_Collides && l_DotAngle > Mathf.Cos(m_ConeAngle * 0.5f * Mathf.Deg2Rad);
-    }
-
     private void OnCollisionEnter(Collision collision)
     {
         if(collision.gameObject.tag != "Suelo" && m_CurrentState==State.Attack)
@@ -139,7 +117,9 @@ public class IAQuarterback : MonoBehaviour
 
     IEnumerator WaitSeconds(float seconds)
     {
+        print(Time.time);
         yield return new WaitForSeconds(seconds);
+        print(Time.time);
         ChangeState(m_CurrentState, State.Attack);
     }
 
