@@ -20,11 +20,11 @@ public class ObjectFall : MonoBehaviour
 
     private void Start()
     {
-        LlenaEstanteria(objetosEstanterias, estanterias[0]);
+        /*LlenaEstanteria(objetosEstanterias, estanterias[0]);
         LlenaEstanteria(objetosEstanterias2, estanterias[1]);
         LlenaEstanteria(objetosEstanterias3, estanterias[2]);
         LlenaEstanteria(objetosEstanterias4, estanterias[3]);
-        LlenaEstanteria(objetosEstanterias5, estanterias[4]);
+        LlenaEstanteria(objetosEstanterias5, estanterias[4]);*/
 
     }
 

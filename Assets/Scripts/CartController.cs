@@ -54,7 +54,7 @@ public class CartController : MonoBehaviour
         }
         else if (Input.GetKey(KeyCode.S))
         {
-            speed = acceleration;
+            speed = -acceleration/2;
 
             eugenioAnimator.SetFloat("Speed", 0.7f);
 
@@ -87,7 +87,6 @@ public class CartController : MonoBehaviour
 
         currentRotation = Mathf.Lerp(currentRotation, rotation, Time.deltaTime * 4f);
         rotation = 0f;
-
         
         ruedasDelanteras.localEulerAngles = new Vector3(-(horizontalDir * 20), 0, ruedasDelanteras.localEulerAngles.z);//gira rueda
         ruedasTraseras.localEulerAngles = new Vector3(-(horizontalDir * 10), 0, ruedasTraseras.localEulerAngles.z);//gira rueda
@@ -99,7 +98,6 @@ public class CartController : MonoBehaviour
     private void Rotate(int _direction, float _absoulteDir)
     {
         rotation = (steering * _direction) * _absoulteDir;
-        print("rotation = " + rotation);
         eugenioAnimator.SetFloat("Rotation", rotation*1.4f);
     }
 
