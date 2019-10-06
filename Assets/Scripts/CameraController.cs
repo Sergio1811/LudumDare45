@@ -14,22 +14,26 @@ public class CameraController : MonoBehaviour
 
     public float minDistance = 4;
     public float maxDistance = 8;
+    public float maxDistanceReal;
 
     private float currentSpeed = 50;
     private float limitSpeed = 1.5f;
     public float acceleratePerSecond = 10f;
 
+    Vector3 m_DesiredPosition;
+    public float m_OffsetOnCollision;
     public LayerMask layerMask;
     // Start is called before the first frame update
     void Start()
     {
+        maxDistanceReal = maxDistance;
         minDistance = (looker.position - transformPositionCamera.position).magnitude;
     }
 
     // Update is called once per frame
     void Update()
     {
-
+        CameraColliding();
     }
 
     private void FixedUpdate()
@@ -93,5 +97,32 @@ public class CameraController : MonoBehaviour
         }
 
         return viable;
+    }
+
+    public void CameraColliding()
+    {
+        RaycastHit l_RaycastHit;
+        Vector3 l_Direction = looker.transform.position - myCamera.transform.position;
+        Ray l_Ray = new Ray(myCamera.transform.position, l_Direction);
+        if (Physics.Raycast(l_Ray, out l_RaycastHit, layerMask))
+        {
+            print("Ray");
+            if (l_RaycastHit.collider.gameObject.tag != "Player")
+            {
+                myCamera.transform.position = l_RaycastHit.point + l_Direction.normalized * 0.2f;
+                goToPosition.position = l_RaycastHit.point + l_Direction.normalized * 0.2f;
+                maxDistance = (looker.position - l_RaycastHit.point + l_Direction.normalized * 0.2f).magnitude;
+                CameraColliding();
+            }
+            else
+                maxDistance = maxDistanceReal;
+        }
+ 
+
+    }
+
+    private void OnDrawGizmos()
+    {
+        Gizmos.DrawRay(this.transform.position,(looker.transform.position - myCamera.transform.position));
     }
 }
