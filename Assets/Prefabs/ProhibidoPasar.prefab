@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 4590675469491043100}
   - component: {fileID: 4822895309922484522}
   - component: {fileID: 1284322833640996307}
+  - component: {fileID: 4523454535798496567}
   m_Layer: 0
   m_Name: ProhibidoPasar
   m_TagString: Untagged
@@ -77,3 +78,16 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
+--- !u!65 &4523454535798496567
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 715512537693161743}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 88.0412, y: 62.75765, z: 8.167664}
+  m_Center: {x: -42.590454, y: 31.378824, z: 1.0992126}
