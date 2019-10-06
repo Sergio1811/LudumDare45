@@ -16,7 +16,7 @@ public class CameraController : MonoBehaviour
     public float maxDistance = 8;
 
     private float currentSpeed = 50;
-    private float limitSpeed = 0;
+    private float limitSpeed = 1.5f;
     public float acceleratePerSecond = 10f;
 
     public LayerMask layerMask;

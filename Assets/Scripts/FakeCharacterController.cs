@@ -11,14 +11,15 @@ public class FakeCharacterController : MonoBehaviour
     int currentpos = 0;
     void Update()
     {
-        transform.Rotate(0, Input.GetAxis("Horizontal") * Time.deltaTime * rotationSpeed, 0);
-        transform.Translate(0, 0, Input.GetAxis("Vertical") * Time.deltaTime * movementSpeed);
+        //transform.Rotate(0, Input.GetAxis("Horizontal") * Time.deltaTime * rotationSpeed, 0);
+        //transform.Translate(0, 0, Input.GetAxis("Vertical") * Time.deltaTime * movementSpeed);
 
 
     }
 
     private void OnCollisionEnter(Collision collision)
     {
+        print("colliding");
         if (collision.gameObject.GetComponent<ObjectFall>() != null)
             collision.gameObject.GetComponent<ObjectFall>().ObjectFalling();
     }
