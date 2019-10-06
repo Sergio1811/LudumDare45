@@ -70,7 +70,6 @@ public class ObjectFall : MonoBehaviour
             _list.Add(Instantiate(PoolObjetos[random], _estanteria));
             distance += _list[_list.Count - 1].transform.GetChild(0).GetComponent<ObjetoEstanteria>().ancho * 0.001f;
             _list[_list.Count - 1].transform.localPosition = new Vector3(0,0, distance*0.1f);
-            _list[_list.Count - 1].transform.GetChild(0).GetComponent<ObjetoEstanteria>().gm = gm;
             //_list[_list.Count - 1].transform.parent = _estanteria;
 
             distance += 0.5f;

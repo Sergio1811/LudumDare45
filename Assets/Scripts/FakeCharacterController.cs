@@ -21,6 +21,8 @@ public class FakeCharacterController : MonoBehaviour
     {
         if (collision.gameObject.GetComponent<ObjectFall>() != null)
             collision.gameObject.GetComponent<ObjectFall>().ObjectFalling();
+        else if(collision.gameObject.GetComponent<CuboEstanteriaScript>() != null)
+            collision.gameObject.GetComponent<CuboEstanteriaScript>().ObjectFalling();
     }
 
     private void OnTriggerEnter(Collider other)

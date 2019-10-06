@@ -12,7 +12,6 @@ public class ObjetoEstanteria : MonoBehaviour
     float currentTime = 0;
     float maxTime;
     public Rigidbody rb;
-    public GameManager gm;
     public List<GameObject> objetos = new List<GameObject>();
     bool firstTime = true;
     private void Awake()
@@ -27,11 +26,11 @@ public class ObjetoEstanteria : MonoBehaviour
 
     private void Update()
     {
-        if(gm != null && firstTime && objetos.Count > 0)
+        if(firstTime && objetos.Count > 0)
         {
             firstTime = false;
-            Random.InitState(gm.random * 2);
-            gm.random++;
+            Random.InitState(GameManager.Instance.random * 2);
+            GameManager.Instance.random++;
             int random = Random.Range(0, objetos.Count);
             objetos[random].SetActive(true);
 
