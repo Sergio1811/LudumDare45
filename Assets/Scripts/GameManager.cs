@@ -8,6 +8,7 @@ public class GameManager : MonoBehaviour
     [HideInInspector]
     public GameObject m_Player;
     public CameraShake m_CameraShake;
+    public int random = 1;
 
     public int points;
 

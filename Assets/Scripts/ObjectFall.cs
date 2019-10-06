@@ -39,7 +39,7 @@ public class ObjectFall : MonoBehaviour
 
         for (int i = 0; i < estanterias.Count; i++)
         {
-            Random.InitState(estanteria + randomNum);
+            Random.InitState(gm.random * 2);
             objetosEstanterias.Add(new List<PakageObjects>());
             if(PoolObjetos.Count > 0)
                 LlenaEstanteria(objetosEstanterias[i], estanterias[i]);
@@ -57,11 +57,12 @@ public class ObjectFall : MonoBehaviour
         int count = 0;
         while (!lleno)
         {
+            gm.random++;
             count++;
             distance += 3.5f;
             if (!onlyOne)
             {
-                Random.InitState((count + estanteria + randomNum));
+                Random.InitState((gm.random * 2));
                 random = Random.Range(0, PoolObjetos.Count);
             }
             else onlyOne = false;

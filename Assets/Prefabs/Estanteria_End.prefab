@@ -199,8 +199,15 @@ MonoBehaviour:
   m_Duration: 0
   m_Force: 0
   m_MaxDistance: 0
+  randomNum: 0
   PoolObjetos:
+  - {fileID: 7561202179905844652, guid: 8f68760fb440157479d54c21a49888cd, type: 3}
+  - {fileID: 2056527311110510900, guid: 84d8cc8708ce78f4697e0b549c84efcf, type: 3}
+  - {fileID: 1926281616121670427, guid: 1ae01cc65c945884981f72bac4071dc0, type: 3}
+  - {fileID: 5184752276524929119, guid: d8f67ba4541b468409f7cfe4208111f8, type: 3}
   - {fileID: 8103998959573232368, guid: e8032d9ce0c82ae49abb35901a2ece3e, type: 3}
+  - {fileID: 8165662004386549195, guid: c36f1fc88d15be8458a667b0731a675d, type: 3}
+  - {fileID: 5203979900491353886, guid: 7eed4ac0958abc24384a8eb5965bf363, type: 3}
   estanterias: []
 --- !u!1 &1053329361122374363
 GameObject:
