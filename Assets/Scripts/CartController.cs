@@ -50,7 +50,7 @@ public class CartController : MonoBehaviour
         }
         else if (Input.GetKey(KeyCode.S))
         {
-            speed = acceleration;
+            speed -= acceleration / 2;
 
 
             for (int i = 0; i < 2; i++)
