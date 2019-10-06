@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 3695880175146769824}
   - component: {fileID: -2435951166399292687}
   - component: {fileID: 2930475418367071829}
+  - component: {fileID: 3479610922690759198}
   m_Layer: 0
   m_Name: Botella
   m_TagString: Object
@@ -25,7 +26,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 365141939887992755}
-  m_LocalRotation: {x: 0, y: -0, z: -0, w: 1}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 41.214, y: 1.51, z: 17.181}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
@@ -62,6 +63,24 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
+--- !u!114 &3479610922690759198
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 365141939887992755}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4af1a577c57158d43b7e9b9e00823373, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ancho: 13
+  hondo: 13
+  alto: 40
+  puntuacion: 1
+  caido: 0
+  rb: {fileID: 0}
 --- !u!1 &603875094036409150
 GameObject:
   m_ObjectHideFlags: 0

@@ -9,6 +9,8 @@ public class ObjectFall : MonoBehaviour
     public float m_Force;
     public float m_MaxDistance;
     private List<List<PakageObjects>> objetosEstanterias = new List<List<PakageObjects>>();
+    private int estanteria = 0;
+    public int randomNum;
     /*private List<ObjetoEstanteria> objetosEstanterias2 = new List<ObjetoEstanteria>();
     private List<ObjetoEstanteria> objetosEstanterias3 = new List<ObjetoEstanteria>();
     private List<ObjetoEstanteria> objetosEstanterias4 = new List<ObjetoEstanteria>();
@@ -17,11 +19,17 @@ public class ObjectFall : MonoBehaviour
     public List<PakageObjects> PoolObjetos = new List<PakageObjects>();
 
     public List<Transform> estanterias = new List<Transform>();
+    private int random2;
+    GameManager gm;
 
     private void Awake()
     {
+        gm = GameObject.Find("GameManager").GetComponent<GameManager>();
+        Random.InitState(randomNum);
+
         for (int i = 0; i < 5; i++)
         {
+            estanteria++;
             estanterias.Add(gameObject.transform.GetChild(i));
         }
     }
@@ -31,16 +39,12 @@ public class ObjectFall : MonoBehaviour
 
         for (int i = 0; i < estanterias.Count; i++)
         {
+            Random.InitState(estanteria + randomNum);
             objetosEstanterias.Add(new List<PakageObjects>());
             if(PoolObjetos.Count > 0)
-                LlenaEstanteria(objetosEstanterias[objetosEstanterias.Count - 1], estanterias[i]);
+                LlenaEstanteria(objetosEstanterias[i], estanterias[i]);
         }
 
-        /*LlenaEstanteria(objetosEstanterias, estanterias[0]);
-        LlenaEstanteria(objetosEstanterias2, estanterias[1]);
-        LlenaEstanteria(objetosEstanterias3, estanterias[2]);
-        LlenaEstanteria(objetosEstanterias4, estanterias[3]);
-        LlenaEstanteria(objetosEstanterias5, estanterias[4]);*/
 
     }
 
@@ -57,7 +61,7 @@ public class ObjectFall : MonoBehaviour
             distance += 3.5f;
             if (!onlyOne)
             {
-                Random.InitState(Mathf.RoundToInt(Time.time));
+                Random.InitState((count + estanteria + randomNum));
                 random = Random.Range(0, PoolObjetos.Count);
             }
             else onlyOne = false;

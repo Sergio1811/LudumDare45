@@ -260,7 +260,11 @@ MonoBehaviour:
   m_Force: 0
   m_MaxDistance: 0
   PoolObjetos:
+  - {fileID: 8925794754106343265, guid: 52018ee8cc71acb46b12038f0b8ff7af, type: 3}
+  - {fileID: 2056527311110510900, guid: 84d8cc8708ce78f4697e0b549c84efcf, type: 3}
+  - {fileID: 1926281616121670427, guid: 1ae01cc65c945884981f72bac4071dc0, type: 3}
   - {fileID: 8103998959573232368, guid: e8032d9ce0c82ae49abb35901a2ece3e, type: 3}
+  - {fileID: 5203979900491353886, guid: 7eed4ac0958abc24384a8eb5965bf363, type: 3}
   estanterias: []
 --- !u!1 &6099317714858957464
 GameObject:

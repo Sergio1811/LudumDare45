@@ -88,6 +88,7 @@ GameObject:
   - component: {fileID: 5793109698703682681}
   - component: {fileID: 5102311387950252631}
   - component: {fileID: 396696691652142457}
+  - component: {fileID: 1464061652439327553}
   m_Layer: 0
   m_Name: Ropa
   m_TagString: Object
@@ -102,7 +103,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7367356049487863402}
-  m_LocalRotation: {x: 0, y: -0, z: -0, w: 1}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 12.435214, y: 0.0077682734, z: -12.985985}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
@@ -139,3 +140,21 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 0.29951286, y: 0.07109457, z: 0.34427547}
   m_Center: {x: -0.006462097, y: 0.024581045, z: 0.0012860298}
+--- !u!114 &1464061652439327553
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7367356049487863402}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4af1a577c57158d43b7e9b9e00823373, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ancho: 30
+  hondo: 6
+  alto: 25
+  puntuacion: 2
+  caido: 0
+  rb: {fileID: 0}

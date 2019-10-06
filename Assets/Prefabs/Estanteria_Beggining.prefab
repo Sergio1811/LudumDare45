@@ -231,6 +231,7 @@ MonoBehaviour:
   m_MaxDistance: 0
   PoolObjetos:
   - {fileID: 8103998959573232368, guid: e8032d9ce0c82ae49abb35901a2ece3e, type: 3}
+  - {fileID: 5203979900491353886, guid: 7eed4ac0958abc24384a8eb5965bf363, type: 3}
   estanterias: []
 --- !u!1 &6895190344678657221
 GameObject:

@@ -88,6 +88,7 @@ GameObject:
   - component: {fileID: 5278648650498018815}
   - component: {fileID: 4607854835997454357}
   - component: {fileID: 8621564041909373251}
+  - component: {fileID: 5127514164107918359}
   m_Layer: 0
   m_Name: Cereal
   m_TagString: Object
@@ -102,7 +103,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 9158878129409851372}
-  m_LocalRotation: {x: -0, y: 0.70710576, z: -0, w: 0.70710784}
+  m_LocalRotation: {x: 0, y: 0.7071068, z: 0, w: 0.70710677}
   m_LocalPosition: {x: 41.218, y: 1.013, z: 17.085}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
@@ -139,3 +140,21 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 0.09139824, y: 0.35672116, z: 0.27880478}
   m_Center: {x: 0.00088808686, y: 0.16904569, z: -0.00169155}
+--- !u!114 &5127514164107918359
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9158878129409851372}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4af1a577c57158d43b7e9b9e00823373, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ancho: 27
+  hondo: 6
+  alto: 35
+  puntuacion: 1
+  caido: 0
+  rb: {fileID: 0}
