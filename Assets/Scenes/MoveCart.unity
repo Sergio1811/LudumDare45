@@ -596,5 +596,30 @@ PrefabInstance:
       propertyPath: acceleration
       value: 80
       objectReference: {fileID: 0}
+    - target: {fileID: 4560512108539099355, guid: de8e9fc80dc31804fb637260c73575a5,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 138232726830619738, guid: de8e9fc80dc31804fb637260c73575a5,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 908495397100518131, guid: de8e9fc80dc31804fb637260c73575a5,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4681115016663893152, guid: de8e9fc80dc31804fb637260c73575a5,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1408304076068694774, guid: de8e9fc80dc31804fb637260c73575a5,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: de8e9fc80dc31804fb637260c73575a5, type: 3}
