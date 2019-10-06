@@ -106,7 +106,7 @@ public class ObjectFall : MonoBehaviour
     public void ObjectFalling()
     {
         ObjetoEstanteria[] objEstant = GetComponentsInChildren<ObjetoEstanteria>();
-        Vector3 l_Direction = (GameManager.Instance.m_Player.transform.position - this.transform.position).normalized;
+        Vector3 l_Direction = -this.transform.right;
 
         for (int i = 0; i < objEstant.Length; i++)
         {
