@@ -7,6 +7,8 @@ public class FakeCharacterController : MonoBehaviour
     public float movementSpeed = 5.0f;
     public float rotationSpeed = 200.0f;
     int currentpos = 0;
+    int numLayer = 0;
+    public GameObject[] layers;
     void Update()
     {
         //transform.Rotate(0, Input.GetAxis("Horizontal") * Time.deltaTime * rotationSpeed, 0);
@@ -26,10 +28,17 @@ public class FakeCharacterController : MonoBehaviour
         if(other.gameObject.CompareTag("Object"))
         {
             other.gameObject.GetComponent<Rigidbody>().isKinematic = true;
+            other.gameObject.GetComponentInChildren<Collider>().isTrigger = false;
             other.gameObject.GetComponent<Collider>().enabled = false;
-            Destroy(other.gameObject);
-            currentpos++;
-
+            other.transform.parent = this.gameObject.transform;
+            GameManager.Instance.sumPoints(30);
+            if(GameManager.Instance.points > numLayer * 50 && numLayer <= 5)
+            {
+                if (numLayer > 0)
+                    layers[numLayer - 1].SetActive(false);
+                layers[numLayer].SetActive(true);
+                numLayer++;
+            }
         }
     }
 }

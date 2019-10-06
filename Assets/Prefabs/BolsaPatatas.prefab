@@ -26,9 +26,9 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8764853898320110528}
-  m_LocalRotation: {x: 0, y: -0, z: -0, w: 1}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 3, y: 3, z: 3}
   m_Children:
   - {fileID: 7325220123356195236}
   m_Father: {fileID: 0}
@@ -79,6 +79,8 @@ MonoBehaviour:
   hondo: 8
   alto: 24
   puntuacion: 0
+  caido: 0
+  rb: {fileID: 0}
 --- !u!1 &9160594154039286820
 GameObject:
   m_ObjectHideFlags: 0

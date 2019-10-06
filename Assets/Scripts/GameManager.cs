@@ -8,7 +8,9 @@ public class GameManager : MonoBehaviour
     [HideInInspector]
     public GameObject m_Player;
     public CameraShake m_CameraShake;
-    
+
+    public int points;
+
     void Awake()
     {
         if (instance == null)
@@ -26,6 +28,7 @@ public class GameManager : MonoBehaviour
     private void Start()
     {
         m_Player = GameObject.FindGameObjectWithTag("Player");
+        points = 0;
     }
 
     public static GameManager Instance
@@ -38,6 +41,11 @@ public class GameManager : MonoBehaviour
             }
             return instance;
         }
+    }
+
+    public void sumPoints(int _points)
+    {
+        points += _points;
     }
 
 }

@@ -148,6 +148,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1280831830}
   - component: {fileID: 1280831829}
+  - component: {fileID: 1280831831}
   m_Layer: 0
   m_Name: Directional Light
   m_TagString: Untagged
@@ -229,6 +230,21 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 50, y: -30, z: 0}
+--- !u!114 &1280831831
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1280831828}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d26135655d4864e43b3cdb5b77579fab, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Player: {fileID: 0}
+  m_CameraShake: {fileID: 0}
+  points: 0
 --- !u!1 &1342087240
 GameObject:
   m_ObjectHideFlags: 0
@@ -318,7 +334,7 @@ Transform:
   m_LocalScale: {x: 20, y: 20, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 3
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1431187835
 GameObject:
@@ -485,7 +501,7 @@ PrefabInstance:
     - target: {fileID: 3866513952557201775, guid: f0448989abbd9da488185d689d76744b,
         type: 3}
       propertyPath: m_RootOrder
-      value: 4
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 3866513952557201775, guid: f0448989abbd9da488185d689d76744b,
         type: 3}
@@ -588,23 +604,3 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: de8e9fc80dc31804fb637260c73575a5, type: 3}
---- !u!1 &6745914135922588027 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 6745914135496787877, guid: de8e9fc80dc31804fb637260c73575a5,
-    type: 3}
-  m_PrefabInstance: {fileID: 6745914135922588026}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &6745914135922588028
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6745914135922588027}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ef0fcdfcd03523d4fb79076f57b35441, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  movementSpeed: 5
-  rotationSpeed: 200

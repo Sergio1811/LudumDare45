@@ -20,11 +20,18 @@ public class ObjetoEstanteria : MonoBehaviour
 
     private void Update()
     {
-        if(caido)
+        if (caido)
         {
             currentTime += Time.deltaTime;
             if (currentTime >= maxTime)
-                Destroy(gameObject);
+                PequenoHastaMorir();
         }
+    }
+
+    public void PequenoHastaMorir()
+    {
+        if (gameObject.transform.localScale.x < 0.05f)
+            Destroy(gameObject);
+        gameObject.transform.localScale -= new Vector3(Time.deltaTime, Time.deltaTime, Time.deltaTime);
     }
 }
