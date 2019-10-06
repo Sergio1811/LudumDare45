@@ -12,7 +12,8 @@ public class IAQuarterback : MonoBehaviour
     Vector3 m_NextDestino;
     public GameObject[] m_PointsOfMov;
     public LayerMask m_LayerMask;
-
+    public Animator myAnimator;
+    public Transform copyPlayerPos;
    //    public Transform playerT;
 
     void Start()
@@ -33,8 +34,10 @@ public class IAQuarterback : MonoBehaviour
             case State.Searching:
 
                 RaycastHit l_Hit;
+                Ray ray = new Ray(gameObject.transform.position, (copyPlayerPos.position - gameObject.transform.position).normalized);
+                Debug.DrawRay(gameObject.transform.position, copyPlayerPos.position - gameObject.transform.position);
 
-                if(Physics.Raycast(gameObject.transform.position + (GameManager.Instance.m_Player.transform.position - gameObject.transform.position).normalized, (GameManager.Instance.m_Player.transform.position-gameObject.transform.position), out l_Hit, m_LayerMask))
+                if (Physics.Raycast(ray, out l_Hit, m_LayerMask))
                 {
                     print("Detectado");
                     print(l_Hit.transform.name);
@@ -95,7 +98,9 @@ public class IAQuarterback : MonoBehaviour
                 break;
             case State.Dead:
                 m_NMAgent.isStopped=true;
-                //CHANGEANIMATION
+                m_NMAgent.velocity = Vector3.zero;
+                this.gameObject.GetComponent<Collider>().enabled = false;
+                myAnimator.SetBool("Dead", true);
                 break;
 
         }
@@ -104,13 +109,9 @@ public class IAQuarterback : MonoBehaviour
 
     private void OnCollisionEnter(Collision collision)
     {
-        if(collision.gameObject.CompareTag("Player") && m_CurrentState==State.Attack)
+        if(collision.gameObject.tag != "Suelo" && m_CurrentState==State.Attack)
         {
             //SOMETHINGHAPPEN
-            ChangeState(m_CurrentState, State.Dead);
-        }
-        else if( m_CurrentState==State.Attack)
-        {
             ChangeState(m_CurrentState, State.Dead);
         }
     }
@@ -139,8 +140,8 @@ public class IAQuarterback : MonoBehaviour
         }
     }
 
-    private void OnDrawGizmos()
+    /*private void OnDrawGizmos()
     {
-        Gizmos.DrawRay(this.transform.position, (GameManager.Instance.m_Player.transform.position - this.transform.position));
-    }
+        Gizmos.DrawRay(this.transform.position, (copyPlayerPos.position - this.transform.position));
+    }*/
 }
