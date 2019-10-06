@@ -101,7 +101,7 @@ Material:
     - _TessMax: 25
     - _TessMin: 10
     - _TessPhongStrength: 0.484
-    - _TessValue: 5.1
+    - _TessValue: 1
     - _UVSec: 0
     - _ZWrite: 1
     - __dirty: 1

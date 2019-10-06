@@ -118,9 +118,7 @@ public class IAQuarterback : MonoBehaviour
 
     IEnumerator WaitSeconds(float seconds)
     {
-        print(Time.time);
         yield return new WaitForSeconds(seconds);
-        print(Time.time);
         ChangeState(m_CurrentState, State.Attack);
     }
 
