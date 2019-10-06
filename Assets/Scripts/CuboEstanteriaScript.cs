@@ -31,11 +31,11 @@ public class CuboEstanteriaScript : MonoBehaviour
         {
             GameManager.Instance.random++;
             Random.InitState(GameManager.Instance.random);
-            objEstant[i].rb.AddForce(l_Direction * Random.Range(m_ExplosionForce * 0.8f, m_ExplosionForce * 1.2f), ForceMode.Impulse);
+            objEstant[i].rb.AddForce(l_Direction * Random.Range(m_ExplosionForce * 0.3f, m_ExplosionForce * 1.2f), ForceMode.Impulse);
             objEstant[i].rb.transform.SetParent(null);
             objEstant[i].caido = true;
         }
 
-        StartCoroutine(GameManager.Instance.m_CameraShake.Shake(m_Duration, m_Force, m_MaxDistance));
+        //StartCoroutine(GameManager.Instance.m_CameraShake.Shake(m_Duration, m_Force, m_MaxDistance));
     }
 }

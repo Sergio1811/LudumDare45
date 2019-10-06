@@ -115,6 +115,6 @@ public class ObjectFall : MonoBehaviour
             objEstant[i].caido = true;
         }
 
-        StartCoroutine(GameManager.Instance.m_CameraShake.Shake(m_Duration,m_Force, m_MaxDistance));
+        //StartCoroutine(GameManager.Instance.m_CameraShake.Shake(m_Duration,m_Force, m_MaxDistance));
     }
 }
