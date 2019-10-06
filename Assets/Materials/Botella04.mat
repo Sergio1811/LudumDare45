@@ -1,0 +1,89 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!21 &2100000
+Material:
+  serializedVersion: 6
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_Name: Botella04
+  m_Shader: {fileID: 4800000, guid: a02f1eea72830ad4eb1ca0ec43374f8f, type: 3}
+  m_ShaderKeywords: _KEYWORD0_ON
+  m_LightmapFlags: 5
+  m_EnableInstancingVariants: 0
+  m_DoubleSidedGI: 0
+  m_CustomRenderQueue: 3000
+  stringTagMap: {}
+  disabledShaderPasses: []
+  m_SavedProperties:
+    serializedVersion: 3
+    m_TexEnvs:
+    - _BaseColor:
+        m_Texture: {fileID: 2800000, guid: b20d2974a8b655d43bf94dca50a48814, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _BaseColorRGBOutlineWidthA:
+        m_Texture: {fileID: 2800000, guid: 366d56e51191a9541a5a618bf9ef2212, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _Highlight:
+        m_Texture: {fileID: 2800000, guid: a35c15d025b3fae4f9a5ce49190f96c0, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _MainTex:
+        m_Texture: {fileID: 2800000, guid: 366d56e51191a9541a5a618bf9ef2212, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _NormalMap:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _Specular:
+        m_Texture: {fileID: 2800000, guid: d0e02d16b9b1ab349a4dc2481cc01d37, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _texcoord:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    m_Floats:
+    - _BaseCellOffset: -0.21
+    - _BaseCellSharpness: 0.546
+    - _BaseCellshadeOffset: 0
+    - _BaseCellshadeSharpness: 0.01
+    - _DiffuseCellshadeOffset: 0
+    - _DiffuseCellshadeSharpness: 0.01
+    - _Float0: 1
+    - _Glossiness: 8.37
+    - _HighlightCellOffset: -0.5
+    - _HighlightCellSharpness: 0.361
+    - _IndirectContribution: 0.762
+    - _IndirectDiffuseContribution: 0.107
+    - _IndirectSpecularContribution: 1
+    - _Keyword0: 1
+    - _NormalScale: 0.426
+    - _OutlineWidth: 0.001
+    - _RimAmount: 0.669
+    - _RimOff: 0.6
+    - _RimOffset: 0.32
+    - _RimPower: 0.456
+    - _RimThreshold: 0.328
+    - _ShadowContribution: 0.467
+    - _SpecularOffset: -0.95
+    - _SpecularSharpness: 0.01
+    - _StaticHighLights: 0
+    - _TessMax: 25
+    - _TessMin: 10
+    - _TessPhongStrength: 0.385
+    - _TessValue: 25.6
+    - __dirty: 0
+    m_Colors:
+    - _AmbientColor: {r: 0.4, g: 0.4, b: 0.4, a: 1}
+    - _BaseTint: {r: 1, g: 1, b: 1, a: 1}
+    - _Color: {r: 1, g: 1, b: 1, a: 1}
+    - _HighlightTint: {r: 1.7381213, g: 1.7381213, b: 1.7381213, a: 1}
+    - _OutlineTint: {r: 0, g: 0, b: 0, a: 1}
+    - _RimColor: {r: 0.2830189, g: 0.2830189, b: 0.2830189, a: 1}
+    - _SpecularColor: {r: 0.4056604, g: 0.4056604, b: 0.4056604, a: 1}
+    - _SpecularTint: {r: 1, g: 1, b: 1, a: 1}
+    - _TintBaseColor: {r: 1, g: 1, b: 1, a: 0}
