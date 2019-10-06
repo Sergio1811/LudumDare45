@@ -2241,15 +2241,15 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1701383861}
     m_Modifications:
-    - target: {fileID: -2435951166399292687, guid: 2200d420c9b45e24c824a6a5f078cfbe,
-        type: 3}
-      propertyPath: m_Enabled
-      value: 1
-      objectReference: {fileID: 0}
     - target: {fileID: 365141939887992755, guid: 2200d420c9b45e24c824a6a5f078cfbe,
         type: 3}
       propertyPath: m_Name
       value: Botella (6)
+      objectReference: {fileID: 0}
+    - target: {fileID: -2435951166399292687, guid: 2200d420c9b45e24c824a6a5f078cfbe,
+        type: 3}
+      propertyPath: m_Enabled
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 3695880175146769824, guid: 2200d420c9b45e24c824a6a5f078cfbe,
         type: 3}
@@ -11569,15 +11569,15 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1701383861}
     m_Modifications:
-    - target: {fileID: -2435951166399292687, guid: 2200d420c9b45e24c824a6a5f078cfbe,
-        type: 3}
-      propertyPath: m_Enabled
-      value: 1
-      objectReference: {fileID: 0}
     - target: {fileID: 365141939887992755, guid: 2200d420c9b45e24c824a6a5f078cfbe,
         type: 3}
       propertyPath: m_Name
       value: Botella (7)
+      objectReference: {fileID: 0}
+    - target: {fileID: -2435951166399292687, guid: 2200d420c9b45e24c824a6a5f078cfbe,
+        type: 3}
+      propertyPath: m_Enabled
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 3695880175146769824, guid: 2200d420c9b45e24c824a6a5f078cfbe,
         type: 3}
@@ -15555,15 +15555,15 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1701383861}
     m_Modifications:
-    - target: {fileID: -2435951166399292687, guid: 2200d420c9b45e24c824a6a5f078cfbe,
-        type: 3}
-      propertyPath: m_Enabled
-      value: 1
-      objectReference: {fileID: 0}
     - target: {fileID: 365141939887992755, guid: 2200d420c9b45e24c824a6a5f078cfbe,
         type: 3}
       propertyPath: m_Name
       value: Botella (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: -2435951166399292687, guid: 2200d420c9b45e24c824a6a5f078cfbe,
+        type: 3}
+      propertyPath: m_Enabled
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 3695880175146769824, guid: 2200d420c9b45e24c824a6a5f078cfbe,
         type: 3}
@@ -18736,15 +18736,15 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1701383861}
     m_Modifications:
-    - target: {fileID: -2435951166399292687, guid: 2200d420c9b45e24c824a6a5f078cfbe,
-        type: 3}
-      propertyPath: m_Enabled
-      value: 1
-      objectReference: {fileID: 0}
     - target: {fileID: 365141939887992755, guid: 2200d420c9b45e24c824a6a5f078cfbe,
         type: 3}
       propertyPath: m_Name
       value: Botella (3)
+      objectReference: {fileID: 0}
+    - target: {fileID: -2435951166399292687, guid: 2200d420c9b45e24c824a6a5f078cfbe,
+        type: 3}
+      propertyPath: m_Enabled
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 3695880175146769824, guid: 2200d420c9b45e24c824a6a5f078cfbe,
         type: 3}
@@ -26951,7 +26951,7 @@ PrefabInstance:
     - target: {fileID: 5762459035471679955, guid: 6b701325323fb6f44af6ee1ae3264b26,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: 0.3390003
+      value: 0.3
       objectReference: {fileID: 0}
     - target: {fileID: 5762459035471679955, guid: 6b701325323fb6f44af6ee1ae3264b26,
         type: 3}
@@ -35601,6 +35601,36 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 36fafdf459ac604448231d89ceb2338e, type: 3}
+--- !u!1 &1007922130
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1007922131}
+  m_Layer: 0
+  m_Name: PakagePatatas
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1007922131
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1007922130}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 1949160262}
+  m_RootOrder: 6
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &1008583840
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -42668,15 +42698,15 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1701383861}
     m_Modifications:
-    - target: {fileID: -2435951166399292687, guid: 2200d420c9b45e24c824a6a5f078cfbe,
-        type: 3}
-      propertyPath: m_Enabled
-      value: 1
-      objectReference: {fileID: 0}
     - target: {fileID: 365141939887992755, guid: 2200d420c9b45e24c824a6a5f078cfbe,
         type: 3}
       propertyPath: m_Name
       value: Botella (5)
+      objectReference: {fileID: 0}
+    - target: {fileID: -2435951166399292687, guid: 2200d420c9b45e24c824a6a5f078cfbe,
+        type: 3}
+      propertyPath: m_Enabled
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 3695880175146769824, guid: 2200d420c9b45e24c824a6a5f078cfbe,
         type: 3}
@@ -46298,15 +46328,15 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1701383861}
     m_Modifications:
-    - target: {fileID: -2435951166399292687, guid: 2200d420c9b45e24c824a6a5f078cfbe,
-        type: 3}
-      propertyPath: m_Enabled
-      value: 1
-      objectReference: {fileID: 0}
     - target: {fileID: 365141939887992755, guid: 2200d420c9b45e24c824a6a5f078cfbe,
         type: 3}
       propertyPath: m_Name
       value: Botella (2)
+      objectReference: {fileID: 0}
+    - target: {fileID: -2435951166399292687, guid: 2200d420c9b45e24c824a6a5f078cfbe,
+        type: 3}
+      propertyPath: m_Enabled
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 3695880175146769824, guid: 2200d420c9b45e24c824a6a5f078cfbe,
         type: 3}
@@ -46393,15 +46423,15 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1701383861}
     m_Modifications:
-    - target: {fileID: -2435951166399292687, guid: 2200d420c9b45e24c824a6a5f078cfbe,
-        type: 3}
-      propertyPath: m_Enabled
-      value: 1
-      objectReference: {fileID: 0}
     - target: {fileID: 365141939887992755, guid: 2200d420c9b45e24c824a6a5f078cfbe,
         type: 3}
       propertyPath: m_Name
       value: Botella (8)
+      objectReference: {fileID: 0}
+    - target: {fileID: -2435951166399292687, guid: 2200d420c9b45e24c824a6a5f078cfbe,
+        type: 3}
+      propertyPath: m_Enabled
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 3695880175146769824, guid: 2200d420c9b45e24c824a6a5f078cfbe,
         type: 3}
@@ -51804,6 +51834,18 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 599403942, guid: de8e9fc80dc31804fb637260c73575a5, type: 3}
+      propertyPath: m_RootOrder
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 599403942, guid: de8e9fc80dc31804fb637260c73575a5, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 3.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 1856956837, guid: de8e9fc80dc31804fb637260c73575a5, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 6
+      objectReference: {fileID: 0}
     - target: {fileID: 6745914136632641042, guid: de8e9fc80dc31804fb637260c73575a5,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -51894,21 +51936,9 @@ PrefabInstance:
       propertyPath: m_Materials.Array.data[0]
       value: 
       objectReference: {fileID: 2100000, guid: abc1a11e5de7e54468bad73df712e164, type: 2}
-    - target: {fileID: 599403942, guid: de8e9fc80dc31804fb637260c73575a5, type: 3}
-      propertyPath: m_RootOrder
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 599403942, guid: de8e9fc80dc31804fb637260c73575a5, type: 3}
-      propertyPath: m_LocalPosition.y
-      value: 3.5
-      objectReference: {fileID: 0}
     - target: {fileID: 683535331, guid: de8e9fc80dc31804fb637260c73575a5, type: 3}
       propertyPath: m_RootOrder
       value: 3
-      objectReference: {fileID: 0}
-    - target: {fileID: 1856956837, guid: de8e9fc80dc31804fb637260c73575a5, type: 3}
-      propertyPath: m_LocalPosition.y
-      value: 6
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: de8e9fc80dc31804fb637260c73575a5, type: 3}
@@ -58453,6 +58483,8 @@ MonoBehaviour:
   m_Duration: 0.35
   m_Force: 0.1
   m_MaxDistance: 0.5
+  PoolObjetos: []
+  estanterias: []
 --- !u!1001 &1701837738
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -59310,6 +59342,17 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 3072294714229090273, guid: 4d04b6f5e4d50bb4a987194911b1568e,
+        type: 3}
+      propertyPath: PoolObjetos.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3072294714229090273, guid: 4d04b6f5e4d50bb4a987194911b1568e,
+        type: 3}
+      propertyPath: PoolObjetos.Array.data[0]
+      value: 
+      objectReference: {fileID: 8103998959573232368, guid: e8032d9ce0c82ae49abb35901a2ece3e,
+        type: 3}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 4d04b6f5e4d50bb4a987194911b1568e, type: 3}
 --- !u!4 &1732725924 stripped
@@ -68428,15 +68471,15 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1701383861}
     m_Modifications:
-    - target: {fileID: -2435951166399292687, guid: 2200d420c9b45e24c824a6a5f078cfbe,
-        type: 3}
-      propertyPath: m_Enabled
-      value: 1
-      objectReference: {fileID: 0}
     - target: {fileID: 365141939887992755, guid: 2200d420c9b45e24c824a6a5f078cfbe,
         type: 3}
       propertyPath: m_Name
       value: Botella (4)
+      objectReference: {fileID: 0}
+    - target: {fileID: -2435951166399292687, guid: 2200d420c9b45e24c824a6a5f078cfbe,
+        type: 3}
+      propertyPath: m_Enabled
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 3695880175146769824, guid: 2200d420c9b45e24c824a6a5f078cfbe,
         type: 3}
@@ -73497,11 +73540,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 702394609}
     m_Modifications:
-    - target: {fileID: -2435951166399292687, guid: 2200d420c9b45e24c824a6a5f078cfbe,
-        type: 3}
-      propertyPath: m_Enabled
-      value: 1
-      objectReference: {fileID: 0}
     - target: {fileID: 365141939887992755, guid: 2200d420c9b45e24c824a6a5f078cfbe,
         type: 3}
       propertyPath: m_Name
@@ -73511,6 +73549,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_IsActive
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -2435951166399292687, guid: 2200d420c9b45e24c824a6a5f078cfbe,
+        type: 3}
+      propertyPath: m_Enabled
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 3695880175146769824, guid: 2200d420c9b45e24c824a6a5f078cfbe,
         type: 3}

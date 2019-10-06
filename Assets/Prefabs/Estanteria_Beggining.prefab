@@ -229,6 +229,9 @@ MonoBehaviour:
   m_Duration: 0
   m_Force: 0
   m_MaxDistance: 0
+  PoolObjetos:
+  - {fileID: 8103998959573232368, guid: e8032d9ce0c82ae49abb35901a2ece3e, type: 3}
+  estanterias: []
 --- !u!1 &6895190344678657221
 GameObject:
   m_ObjectHideFlags: 0
