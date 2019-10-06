@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 680931853685190965}
   - component: {fileID: 8262965504967100472}
   - component: {fileID: 1297859013266935369}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: Bate (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -89,7 +89,7 @@ GameObject:
   - component: {fileID: 769999307099189039}
   - component: {fileID: 6257024160701673644}
   - component: {fileID: 4628763881494350469}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: Bate
   m_TagString: Object
   m_Icon: {fileID: 0}
@@ -132,7 +132,6 @@ MonoBehaviour:
   puntuacion: 5
   caido: 0
   rb: {fileID: 0}
-  gm: {fileID: 0}
   objetos: []
 --- !u!65 &6257024160701673644
 BoxCollider:
@@ -174,7 +173,7 @@ GameObject:
   - component: {fileID: 1501862110481263231}
   - component: {fileID: 6957656692647677286}
   - component: {fileID: 4278773880725802605}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: Bate (3)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -251,7 +250,7 @@ GameObject:
   - component: {fileID: 3442351468195009494}
   - component: {fileID: 7954931975994899}
   - component: {fileID: 7934505771262282166}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: Bate
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -328,7 +327,7 @@ GameObject:
   - component: {fileID: 4900765414175797864}
   - component: {fileID: 8287055911571909107}
   - component: {fileID: 4608655572305799927}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: Bate (2)
   m_TagString: Untagged
   m_Icon: {fileID: 0}

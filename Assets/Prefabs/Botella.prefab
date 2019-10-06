@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: -2435951166399292687}
   - component: {fileID: 2930475418367071829}
   - component: {fileID: 3479610922690759198}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: Botella
   m_TagString: Object
   m_Icon: {fileID: 0}
@@ -84,7 +84,6 @@ MonoBehaviour:
   puntuacion: 1
   caido: 0
   rb: {fileID: 0}
-  gm: {fileID: 0}
   objetos: []
 --- !u!1 &603875094036409150
 GameObject:
@@ -97,7 +96,7 @@ GameObject:
   - component: {fileID: 5557660948576705341}
   - component: {fileID: 3377059510125815281}
   - component: {fileID: 6858492472298911311}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: Bottle_Low
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -174,7 +173,7 @@ GameObject:
   - component: {fileID: 3467844755988258808}
   - component: {fileID: 1816623071586754149}
   - component: {fileID: 4230039139737032926}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: Bottle_Low (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -251,7 +250,7 @@ GameObject:
   - component: {fileID: 428980358779455033}
   - component: {fileID: 1399619222377434421}
   - component: {fileID: 5734997505672396957}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: Bottle_Low (2)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -328,7 +327,7 @@ GameObject:
   - component: {fileID: 9164053734783144238}
   - component: {fileID: 3134028354586456975}
   - component: {fileID: 1299929439674743742}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: Bottle_Low (3)
   m_TagString: Untagged
   m_Icon: {fileID: 0}

@@ -44,9 +44,9 @@ public class CameraController : MonoBehaviour
             currentSpeed = 22;
             myCamera.transform.position = Vector3.MoveTowards(myCamera.transform.position, transformPositionCamera.transform.position, currentSpeed * Time.deltaTime);
         }
-        else if(player.girando || distance < maxDistance || distance > minDistance)
+        else if (player.girando || distance < maxDistance || distance > minDistance)
         {
-            if(!going)
+            if (!going)
                 currentSpeed = 0;
             limitSpeed = 2f * (player.gameObject.transform.position - myCamera.transform.position).magnitude;
 
@@ -109,20 +109,22 @@ public class CameraController : MonoBehaviour
             print("Ray");
             if (l_RaycastHit.collider.gameObject.tag != "Player")
             {
-                myCamera.transform.position = l_RaycastHit.point + l_Direction.normalized * 0.2f;
-                goToPosition.position = l_RaycastHit.point + l_Direction.normalized * 0.2f;
-                maxDistance = (looker.position - l_RaycastHit.point + l_Direction.normalized * 0.2f).magnitude;
-                CameraColliding();
+                myCamera.transform.position = l_RaycastHit.point + l_Direction.normalized * 0.02f;
+                //goToPosition.position = l_RaycastHit.point + l_Direction.normalized * 0.02f;
+                maxDistance = (looker.position - l_RaycastHit.point + l_Direction.normalized * 1.2f).magnitude;
+                currentSpeed = 40;
+                limitSpeed = 5f * (player.gameObject.transform.position - myCamera.transform.position).magnitude;
+                going = true;
             }
             else
                 maxDistance = maxDistanceReal;
         }
- 
+
 
     }
 
     private void OnDrawGizmos()
     {
-        Gizmos.DrawRay(this.transform.position,(looker.transform.position - myCamera.transform.position));
+        Gizmos.DrawRay(this.transform.position, (looker.transform.position - myCamera.transform.position));
     }
 }

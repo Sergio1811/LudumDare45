@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 8644463549953250139}
   - component: {fileID: 5938959637065415463}
   - component: {fileID: 4264838025290402395}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: Cereal
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -88,7 +88,7 @@ GameObject:
   - component: {fileID: 5117405571590575458}
   - component: {fileID: 7520329578007021159}
   - component: {fileID: 4644347959521656181}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: Cereal (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -165,7 +165,7 @@ GameObject:
   - component: {fileID: 6288269324129317025}
   - component: {fileID: 8339380829440430137}
   - component: {fileID: 5013268137510971236}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: Cereal (3)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -242,7 +242,7 @@ GameObject:
   - component: {fileID: 3780977912914640618}
   - component: {fileID: 6519263953044555353}
   - component: {fileID: 2875790584308915957}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: Cereal (2)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -320,7 +320,7 @@ GameObject:
   - component: {fileID: 4607854835997454357}
   - component: {fileID: 8621564041909373251}
   - component: {fileID: 5127514164107918359}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: Cereal
   m_TagString: Object
   m_Icon: {fileID: 0}
@@ -392,5 +392,4 @@ MonoBehaviour:
   puntuacion: 1
   caido: 0
   rb: {fileID: 0}
-  gm: {fileID: 0}
   objetos: []

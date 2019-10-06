@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 6111139822619612128}
   - component: {fileID: 1469902294606961163}
   - component: {fileID: 8213692305574906670}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: Pelota (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -88,7 +88,7 @@ GameObject:
   - component: {fileID: 6880402137924016862}
   - component: {fileID: 5565038197735799269}
   - component: {fileID: 6809055527819587383}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: Pelota
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -165,7 +165,7 @@ GameObject:
   - component: {fileID: 7618264817811739823}
   - component: {fileID: 3364472455177501836}
   - component: {fileID: 7995926683480243881}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: Pelota (2)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -242,7 +242,7 @@ GameObject:
   - component: {fileID: 6450774318960634897}
   - component: {fileID: 3859425774153665784}
   - component: {fileID: 5848655383306179823}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: Pelota
   m_TagString: Object
   m_Icon: {fileID: 0}
@@ -307,7 +307,7 @@ GameObject:
   - component: {fileID: 7046702791245024144}
   - component: {fileID: 9122844330117095717}
   - component: {fileID: 7204155762468499419}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: Pelota (3)
   m_TagString: Untagged
   m_Icon: {fileID: 0}

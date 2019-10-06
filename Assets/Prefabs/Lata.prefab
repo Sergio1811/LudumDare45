@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 7134486637923372571}
   - component: {fileID: 3134698481618870211}
   - component: {fileID: 6296242274370171740}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: Lata_Low (3)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -88,7 +88,7 @@ GameObject:
   - component: {fileID: 8155899155968348187}
   - component: {fileID: 3139151593222397545}
   - component: {fileID: 8621566698886661596}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: Lata_Low (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -165,7 +165,7 @@ GameObject:
   - component: {fileID: 7512676755911497102}
   - component: {fileID: 77021549006137165}
   - component: {fileID: 8061681420661165211}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: Lata_Low
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -242,7 +242,7 @@ GameObject:
   - component: {fileID: 8623060141987024657}
   - component: {fileID: 5754828264146531313}
   - component: {fileID: 2517056559986292419}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: Lata
   m_TagString: Object
   m_Icon: {fileID: 0}
@@ -307,7 +307,7 @@ GameObject:
   - component: {fileID: 7707235159813819898}
   - component: {fileID: 6431552439496320701}
   - component: {fileID: 7495778928861806239}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: Lata_Low (2)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
