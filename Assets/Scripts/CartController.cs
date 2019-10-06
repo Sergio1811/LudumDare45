@@ -26,6 +26,9 @@ public class CartController : MonoBehaviour
 
     public bool girando = false;
 
+    [Header("Eugenio anims")]
+    public Animator eugenioAnimator;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -41,6 +44,7 @@ public class CartController : MonoBehaviour
         {
             speed = acceleration;
 
+            eugenioAnimator.SetFloat("Speed", 0.7f);
 
             for (int i = 0; i < 2; i++)
             {
@@ -50,8 +54,9 @@ public class CartController : MonoBehaviour
         }
         else if (Input.GetKey(KeyCode.S))
         {
-            speed -= acceleration / 2;
+            speed = acceleration;
 
+            eugenioAnimator.SetFloat("Speed", 0.7f);
 
             for (int i = 0; i < 2; i++)
             {
@@ -87,11 +92,15 @@ public class CartController : MonoBehaviour
         ruedasDelanteras.localEulerAngles = new Vector3(-(horizontalDir * 20), 0, ruedasDelanteras.localEulerAngles.z);//gira rueda
         ruedasTraseras.localEulerAngles = new Vector3(-(horizontalDir * 10), 0, ruedasTraseras.localEulerAngles.z);//gira rueda
 
+        if (box.velocity.magnitude <= 10.0f)
+            eugenioAnimator.SetFloat("Speed", 0);
     }
 
     private void Rotate(int _direction, float _absoulteDir)
     {
         rotation = (steering * _direction) * _absoulteDir;
+        print("rotation = " + rotation);
+        eugenioAnimator.SetFloat("Rotation", rotation*1.4f);
     }
 
     private void FixedUpdate()
