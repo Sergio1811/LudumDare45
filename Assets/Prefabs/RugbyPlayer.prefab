@@ -1486,7 +1486,7 @@ GameObject:
   - component: {fileID: 979580926661938380}
   - component: {fileID: 1556525001}
   - component: {fileID: 1556525000}
-  - component: {fileID: 1556525002}
+  - component: {fileID: 704378510}
   m_Layer: 0
   m_Name: RugbyPlayer
   m_TagString: Untagged
@@ -1574,7 +1574,7 @@ NavMeshAgent:
   m_BaseOffset: 0
   m_WalkableMask: 4294967295
   m_ObstacleAvoidanceType: 4
---- !u!114 &1556525002
+--- !u!114 &704378510
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -1583,17 +1583,27 @@ MonoBehaviour:
   m_GameObject: {fileID: 6145568171210085285}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 3eadc21cb361f6d4a8421c50fd39d85c, type: 3}
+  m_Script: {fileID: 11500000, guid: 0619ee6caf2ca0d49a034179b62db4c2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_PointsOfMov:
+  m_NavMeshAgent: {fileID: 1556525000}
+  m_State: 0
+  m_PatrolPositions:
   - {fileID: 0}
   - {fileID: 0}
-  m_LayerMask:
+  m_GameManager: {fileID: 0}
+  m_MinDistanceToAlert: 6
+  m_CollisionLayerMask:
     serializedVersion: 2
     m_Bits: 513
+  m_MinDistanceToAttack: 4
+  m_MaxDistanceToAttack: 8
+  m_MaxDistanceToPatrol: 15
+  m_ConeAngle: 30
+  m_LerpAttackRotation: 0.6
+  m_Life: 100
+  m_Hit: 0
   myAnimator: {fileID: 979580926661938380}
-  copyPlayerPos: {fileID: 0}
 --- !u!1 &6279229071238195039
 GameObject:
   m_ObjectHideFlags: 0

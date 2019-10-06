@@ -76,8 +76,10 @@ public class goodEnemyIA : MonoBehaviour
     void SetChaseState()
     {
         m_State = TState.CHASE;
-        SetNextChasePosition();
+        //SetNextChasePosition();
+        m_NavMeshAgent.SetDestination(GameManager.Instance.m_Player.transform.position);
         m_CurrentTime = 0.0f;
+        m_NavMeshAgent.speed *= 3;
         m_Hit = false;
     }
 
@@ -93,6 +95,7 @@ public class goodEnemyIA : MonoBehaviour
     {
         m_State = TState.DIE;
         m_NavMeshAgent.isStopped = true;
+        m_NavMeshAgent.speed = 0f;
         //StartCoroutine(FadeGameObject());
         //m_Hit = false;
         this.gameObject.GetComponent<Collider>().enabled = false;
@@ -105,7 +108,15 @@ public class goodEnemyIA : MonoBehaviour
             MoveToNextPatrolPosition();
 
         if (SeesPlayer())
-            SetChaseState();
+        {
+            m_State = TState.CHASE;
+            //SetNextChasePosition();
+            m_NavMeshAgent.SetDestination(GameManager.Instance.m_Player.transform.position);
+            m_CurrentTime = 0.0f;
+            m_NavMeshAgent.speed = 50000.0f;
+
+            //SetChaseState();
+        }
 
         if (m_Hit)
             SetDieState();
@@ -113,10 +124,10 @@ public class goodEnemyIA : MonoBehaviour
 
     void UpdateChaseState()
     {
-        if (GetSqrDistanceXZToPosition(GameManager.Instance.m_Player.transform.position) < m_MinDistanceToAttack * m_MinDistanceToAttack)
+        /*if (GetSqrDistanceXZToPosition(GameManager.Instance.m_Player.transform.position) < m_MinDistanceToAttack * m_MinDistanceToAttack)
             SetAttackState();
         if (GetSqrDistanceXZToPosition(GameManager.Instance.m_Player.transform.position) > m_MaxDistanceToPatrol * m_MaxDistanceToPatrol)
-            SetPatrolState();
+            SetPatrolState();*/
 
         if (m_NavMeshAgent.isStopped == false)
             SetNextChasePosition();
@@ -131,7 +142,7 @@ public class goodEnemyIA : MonoBehaviour
         Vector3 l_Destination = GameManager.Instance.m_Player.transform.position - transform.position;
         float l_Distance = l_Destination.magnitude;
         l_Destination /= l_Distance;
-        l_Destination = transform.position + l_Destination * (l_Distance - m_MinDistanceToAttack);
+        l_Destination = transform.position + l_Destination;
         m_NavMeshAgent.SetDestination(l_Destination);
     }
 
@@ -160,11 +171,11 @@ public class goodEnemyIA : MonoBehaviour
 
     bool SeesPlayer()
     {
-        Vector3 l_Direction = (GameManager.Instance.m_Player.transform.position + Vector3.up * 0.9f) - transform.position;
+        Vector3 l_Direction = (GameManager.Instance.m_Player.transform.position) - transform.position;
         Ray l_Ray = new Ray(transform.position, l_Direction);
         float l_Distance = l_Direction.magnitude;
         l_Direction /= l_Distance;
-        bool l_Collides = Physics.Raycast(l_Ray, l_Distance, m_CollisionLayerMask.value);
+        bool l_Collides = Physics.Raycast(l_Ray, l_Distance, m_CollisionLayerMask);
         float l_DotAngle = Vector3.Dot(l_Direction, transform.forward);
 
         Debug.DrawRay(transform.position, l_Direction * l_Distance, l_Collides ? Color.red : Color.yellow);

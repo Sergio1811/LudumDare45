@@ -120,12 +120,6 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 23800000, guid: 8a4f6b0b3d915264ab24cdd9c3f8506c, type: 2}
---- !u!4 &210955959 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 6745914136632641042, guid: de8e9fc80dc31804fb637260c73575a5,
-    type: 3}
-  m_PrefabInstance: {fileID: 6745914135922588026}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &453708236
 GameObject:
   m_ObjectHideFlags: 0
@@ -615,11 +609,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: polisia_RunAtaqueCycle
       objectReference: {fileID: 0}
-    - target: {fileID: 3197384364860183633, guid: e122a0a8516e2b146a6ddeb6e66db4df,
-        type: 3}
-      propertyPath: m_IsActive
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 1874691494254208578, guid: e122a0a8516e2b146a6ddeb6e66db4df,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -633,7 +622,7 @@ PrefabInstance:
     - target: {fileID: 1874691494254208578, guid: e122a0a8516e2b146a6ddeb6e66db4df,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: 1.37
+      value: -26.21
       objectReference: {fileID: 0}
     - target: {fileID: 1874691494254208578, guid: e122a0a8516e2b146a6ddeb6e66db4df,
         type: 3}
@@ -675,6 +664,18 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 845005033, guid: e122a0a8516e2b146a6ddeb6e66db4df, type: 3}
+      propertyPath: m_PatrolPositions.Array.data[0]
+      value: 
+      objectReference: {fileID: 581000389}
+    - target: {fileID: 845005033, guid: e122a0a8516e2b146a6ddeb6e66db4df, type: 3}
+      propertyPath: m_PatrolPositions.Array.data[1]
+      value: 
+      objectReference: {fileID: 453708237}
+    - target: {fileID: 845005033, guid: e122a0a8516e2b146a6ddeb6e66db4df, type: 3}
+      propertyPath: m_GameManager
+      value: 
+      objectReference: {fileID: 1280831831}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: e122a0a8516e2b146a6ddeb6e66db4df, type: 3}
 --- !u!4 &1856956837 stripped
@@ -694,11 +695,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: RugbyPlayer
-      objectReference: {fileID: 0}
-    - target: {fileID: 6145568171210085285, guid: 90b7af9b07f4ebc43a8730da2419a3c8,
-        type: 3}
-      propertyPath: m_IsActive
-      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7138812786552496566, guid: 90b7af9b07f4ebc43a8730da2419a3c8,
         type: 3}
@@ -755,18 +751,18 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 1556525002, guid: 90b7af9b07f4ebc43a8730da2419a3c8, type: 3}
-      propertyPath: m_PointsOfMov.Array.data[0]
+    - target: {fileID: 704378510, guid: 90b7af9b07f4ebc43a8730da2419a3c8, type: 3}
+      propertyPath: m_PatrolPositions.Array.data[0]
       value: 
-      objectReference: {fileID: 581000388}
-    - target: {fileID: 1556525002, guid: 90b7af9b07f4ebc43a8730da2419a3c8, type: 3}
-      propertyPath: m_PointsOfMov.Array.data[1]
+      objectReference: {fileID: 581000389}
+    - target: {fileID: 704378510, guid: 90b7af9b07f4ebc43a8730da2419a3c8, type: 3}
+      propertyPath: m_PatrolPositions.Array.data[1]
       value: 
-      objectReference: {fileID: 453708236}
-    - target: {fileID: 1556525002, guid: 90b7af9b07f4ebc43a8730da2419a3c8, type: 3}
-      propertyPath: copyPlayerPos
+      objectReference: {fileID: 453708237}
+    - target: {fileID: 704378510, guid: 90b7af9b07f4ebc43a8730da2419a3c8, type: 3}
+      propertyPath: m_GameManager
       value: 
-      objectReference: {fileID: 210955959}
+      objectReference: {fileID: 1280831831}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 90b7af9b07f4ebc43a8730da2419a3c8, type: 3}
 --- !u!1001 &3866513952200755366
