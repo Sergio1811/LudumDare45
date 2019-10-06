@@ -17,7 +17,6 @@ public class FakeCharacterController : MonoBehaviour
 
     private void OnCollisionEnter(Collision collision)
     {
-        print("colliding");
         if (collision.gameObject.GetComponent<ObjectFall>() != null)
             collision.gameObject.GetComponent<ObjectFall>().ObjectFalling();
     }
