@@ -6,8 +6,6 @@ public class FakeCharacterController : MonoBehaviour
 {
     public float movementSpeed = 5.0f;
     public float rotationSpeed = 200.0f;
-
-    public GameObject[] m_PositionsCarro;
     int currentpos = 0;
     void Update()
     {
@@ -19,7 +17,6 @@ public class FakeCharacterController : MonoBehaviour
 
     private void OnCollisionEnter(Collision collision)
     {
-        print("colliding");
         if (collision.gameObject.GetComponent<ObjectFall>() != null)
             collision.gameObject.GetComponent<ObjectFall>().ObjectFalling();
     }
@@ -30,8 +27,7 @@ public class FakeCharacterController : MonoBehaviour
         {
             other.gameObject.GetComponent<Rigidbody>().isKinematic = true;
             other.gameObject.GetComponent<Collider>().enabled = false;
-            other.transform.position = m_PositionsCarro[currentpos].transform.position;
-            other.transform.SetParent(m_PositionsCarro[currentpos].transform);
+            Destroy(other.gameObject);
             currentpos++;
 
         }
