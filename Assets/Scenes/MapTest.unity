@@ -35287,7 +35287,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   movementSpeed: 5
   rotationSpeed: 200
-  m_PositionsCarro: []
 --- !u!1001 &1002760365
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -41526,6 +41525,17 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 3955980349494871260, guid: cf3502b59ca8b8246a0d0a7a52e1189e,
+        type: 3}
+      propertyPath: PoolObjetos.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3955980349494871260, guid: cf3502b59ca8b8246a0d0a7a52e1189e,
+        type: 3}
+      propertyPath: PoolObjetos.Array.data[0]
+      value: 
+      objectReference: {fileID: 8103998959573232368, guid: e8032d9ce0c82ae49abb35901a2ece3e,
+        type: 3}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: cf3502b59ca8b8246a0d0a7a52e1189e, type: 3}
 --- !u!1001 &1222726701

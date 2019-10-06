@@ -8,4 +8,23 @@ public class ObjetoEstanteria : MonoBehaviour
     public float hondo;
     public float alto;
     public float puntuacion;
+    public bool caido = false;
+    float currentTime = 0;
+    float maxTime;
+    public Rigidbody rb;
+    private void Awake()
+    {
+        rb = gameObject.GetComponent<Rigidbody>();
+        maxTime = Random.Range(20, 60);
+    }
+
+    private void Update()
+    {
+        if(caido)
+        {
+            currentTime += Time.deltaTime;
+            if (currentTime >= maxTime)
+                Destroy(gameObject);
+        }
+    }
 }

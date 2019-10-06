@@ -100,14 +100,15 @@ public class ObjectFall : MonoBehaviour
 
     public void ObjectFalling()
     {
-        Rigidbody[] l_RigidBodies = GetComponentsInChildren<Rigidbody>();
+        ObjetoEstanteria[] objEstant = GetComponentsInChildren<ObjetoEstanteria>();
         Vector3 l_Direction = (GameManager.Instance.m_Player.transform.position - this.transform.position).normalized;
-        foreach (Rigidbody item in l_RigidBodies)
-        {
-            item.AddForce(l_Direction*Random.Range(m_ExplosionForce*0.8f,m_ExplosionForce*1.2f), ForceMode.Impulse);
-            item.transform.SetParent(null);
-        }
 
+        for (int i = 0; i < objEstant.Length; i++)
+        {
+            objEstant[i].rb.AddForce(l_Direction * Random.Range(m_ExplosionForce * 0.8f, m_ExplosionForce * 1.2f), ForceMode.Impulse);
+            objEstant[i].rb.transform.SetParent(null);
+            objEstant[i].caido = true;
+        }
 
         StartCoroutine(GameManager.Instance.m_CameraShake.Shake(m_Duration,m_Force, m_MaxDistance));
     }
