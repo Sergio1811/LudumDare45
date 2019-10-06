@@ -20,21 +20,21 @@ public class ObjectFall : MonoBehaviour
 
     private void Awake()
     {
-        for (int i = 0; i < 5; i++)
+        /*for (int i = 0; i < 5; i++)
         {
             estanterias.Add(gameObject.transform.GetChild(i));
-        }
+        }*/
     }
 
     private void Start()
     {
 
-        for (int i = 0; i < estanterias.Count; i++)
+       /* for (int i = 0; i < estanterias.Count; i++)
         {
             objetosEstanterias.Add(new List<PakageObjects>());
             if(PoolObjetos.Count > 0)
                 LlenaEstanteria(objetosEstanterias[objetosEstanterias.Count - 1], estanterias[i]);
-        }
+        }*/
 
         /*LlenaEstanteria(objetosEstanterias, estanterias[0]);
         LlenaEstanteria(objetosEstanterias2, estanterias[1]);
