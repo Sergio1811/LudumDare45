@@ -13,12 +13,25 @@ public class FakeCharacterController : MonoBehaviour
     public CartController _cartController;
     bool hit = false;
     float hitTime = 3f;
+    float timeRellenado = 0;
+    ObjectFall[] estanterias;
+
+    private void Start()
+    {
+        estanterias = GameObject.FindObjectsOfType<ObjectFall>();
+    }
     void Update()
     {
         //transform.Rotate(0, Input.GetAxis("Horizontal") * Time.deltaTime * rotationSpeed, 0);
         //transform.Translate(0, 0, Input.GetAxis("Vertical") * Time.deltaTime * movementSpeed);
-
         hitTime -= Time.deltaTime;
+
+        if (timeRellenado > 0)
+        {
+            timeRellenado -= Time.deltaTime;
+            if (timeRellenado < 0)
+                timeRellenado = 0;
+        }
     }
 
     private void OnCollisionEnter(Collision collision)
@@ -52,6 +65,12 @@ public class FakeCharacterController : MonoBehaviour
                 layers[numLayer].SetActive(true);
                 numLayer++;
             }
+        }
+        else if(other.gameObject.CompareTag("Meta") && timeRellenado == 0)
+        {
+            timeRellenado = 15;
+            foreach (ObjectFall obj in estanterias)
+                obj.Rellenar();
         }
     }
 }

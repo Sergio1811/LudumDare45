@@ -116,16 +116,16 @@ public class ObjectFall : MonoBehaviour
     public void Rellenar()
     {
 
-            foreach (var item in objetosEstanterias)
+        foreach (var item in objetosEstanterias)
+        {
+            foreach (var caca in item)
             {
-                foreach (var caca in item)
-                {
                 Destroy(caca.gameObject);
-                }
             }
-        
-
+        }
         objetosEstanterias.Clear();
+
+
         for (int i = 0; i < estanterias.Count; i++)
         {
             Random.InitState(gm.random * 2);

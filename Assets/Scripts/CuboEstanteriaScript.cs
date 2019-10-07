@@ -8,12 +8,14 @@ public class CuboEstanteriaScript : MonoBehaviour
     public float m_Duration;
     public float m_Force;
     public float m_MaxDistance;
-    private List<PakageObjects> objetosEstanterias = new List<PakageObjects>();
+    private ObjetoEstanteria[] objEstant;
+    //private List<Transform> positionsChild;
     // Start is called before the first frame update
 
     void Start()
     {
-        
+        objEstant = GetComponentsInChildren<ObjetoEstanteria>();
+
     }
 
     // Update is called once per frame
@@ -24,7 +26,6 @@ public class CuboEstanteriaScript : MonoBehaviour
 
     public void ObjectFalling()
     {
-        ObjetoEstanteria[] objEstant = GetComponentsInChildren<ObjetoEstanteria>();
         Vector3 l_Direction = ((GameManager.Instance.m_Player.transform.position - gameObject.transform.position).normalized / 2  + Vector3.up).normalized;
 
         for (int i = 0; i < objEstant.Length; i++)
