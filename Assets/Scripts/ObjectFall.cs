@@ -21,9 +21,13 @@ public class ObjectFall : MonoBehaviour
     public List<Transform> estanterias = new List<Transform>();
     private int random2;
     GameManager gm;
-
+    AudioSource m_ASource;
+    
+    SceneManagement m_Scener;
     private void Awake()
     {
+        m_Scener = GameObject.Find("SceneManager").GetComponent<SceneManagement>();
+        //m_ASource.GetComponent<AudioSource>();
         gm = GameObject.Find("GameManager").GetComponent<GameManager>();
         Random.InitState(randomNum);
 
@@ -109,7 +113,8 @@ public class ObjectFall : MonoBehaviour
             objEstant[i].rb.transform.SetParent(null);
             objEstant[i].caido = true;
         }
-
+       // m_ASource.clip = m_Scener.fallClip;
+       // m_ASource.Play();
         //StartCoroutine(GameManager.Instance.m_CameraShake.Shake(m_Duration,m_Force, m_MaxDistance));
     }
 

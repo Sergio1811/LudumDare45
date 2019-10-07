@@ -13,6 +13,10 @@ public class SceneManagement : MonoBehaviour
     public Transform m_SpawnPoint;
     public GameObject m_PLayer;
 
+    public AudioSource m_ASource;
+    public AudioClip m_MoneySound;
+    public AudioClip fallClip;
+
     public void ActivateCanvas()
     {
         m_Canvas.SetActive(true);
@@ -44,6 +48,10 @@ public class SceneManagement : MonoBehaviour
         Application.Quit();
     }
 
+    public void Creditos()
+    {
+        SceneManager.LoadScene(3);
+    }
     public void Upgrade()
     {
         
@@ -57,6 +65,8 @@ public class SceneManagement : MonoBehaviour
             {
                 m_Clothes[number].SetActive(true);
                 GameManager.Instance.sumPoints(-100);
+                m_ASource.clip = m_MoneySound;
+                m_ASource.Play();
             }
         }
         else
@@ -68,6 +78,8 @@ public class SceneManagement : MonoBehaviour
             }
             if (!allCompleted)
                 Upgrade();
+            else
+                Creditos();
         }
         if (m_Panatalones.activeSelf)
             m_Calzones.SetActive(false);

@@ -8,6 +8,7 @@ public class TextManager : MonoBehaviour
     public static TextManager Instance;
     public Text moneyText;
 
+
     // Start is called before the first frame update
     void Start()
     {

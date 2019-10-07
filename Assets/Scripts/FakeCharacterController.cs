@@ -79,8 +79,13 @@ public class FakeCharacterController : MonoBehaviour
         {
             m_SceneManager.ActivateCanvas();
             timeRellenado = 15;
-            foreach (ObjectFall obj in estanterias)
-                obj.Rellenar();
+            
         }
+    }
+
+    private void OnTriggerExit(Collider other)
+    {
+        foreach (ObjectFall obj in estanterias)
+            obj.Rellenar();
     }
 }

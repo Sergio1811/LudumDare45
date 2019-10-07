@@ -34,6 +34,10 @@ public class goodEnemyIA : MonoBehaviour
     public bool m_Hit = false;
 
     public Animator myAnimator;
+    public AudioSource m_ASource;
+    public AudioClip m_ClipSilbato;
+    public AudioClip m_ClipScream;
+    public AudioClip m_ClipDead;
 
     private void Start()
     {
@@ -75,6 +79,11 @@ public class goodEnemyIA : MonoBehaviour
 
     void SetChaseState()
     {
+        m_ASource.clip = m_ClipSilbato;
+        if(myAnimator.name=="QuarterBack")
+            m_ASource.clip = m_ClipScream;
+        if (!m_ASource.isPlaying)
+        m_ASource.Play();
         m_State = TState.CHASE;
         //SetNextChasePosition();
         m_NavMeshAgent.SetDestination(GameManager.Instance.m_Player.transform.position);
@@ -93,6 +102,8 @@ public class goodEnemyIA : MonoBehaviour
 
     void SetDieState()
     {
+        m_ASource.clip = m_ClipDead;
+        m_ASource.Play();
         m_State = TState.DIE;
         m_NavMeshAgent.isStopped = true;
         m_NavMeshAgent.speed = 0f;
