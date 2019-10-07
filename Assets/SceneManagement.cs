@@ -10,7 +10,8 @@ public class SceneManagement : MonoBehaviour
     public GameObject[] m_Clothes;
     public GameObject m_Panatalones;
     public GameObject m_Calzones;
-
+    public Transform m_SpawnPoint;
+    public GameObject m_PLayer;
 
     public void ActivateCanvas()
     {
@@ -19,6 +20,9 @@ public class SceneManagement : MonoBehaviour
     public void DesactivateCanvas()
     {
         m_Canvas.SetActive(false);
+        m_PLayer.transform.position = m_SpawnPoint.position;
+        m_PLayer.transform.rotation = m_SpawnPoint.rotation;
+        
     }
     public void ChargeCatalogue()
     {
@@ -42,13 +46,16 @@ public class SceneManagement : MonoBehaviour
 
     public void Upgrade()
     {
-
+        
         int number = Random.Range(0, m_Clothes.Length);
         bool allCompleted = true;
 
-        
-        if (!m_Clothes[number].activeSelf)
+
+        if (!m_Clothes[number].activeSelf )
+        {
             m_Clothes[number].SetActive(true);
+          
+        }
         else
         {
             foreach (var item in m_Clothes)
@@ -56,8 +63,8 @@ public class SceneManagement : MonoBehaviour
                 if (!item.activeSelf)
                     allCompleted = false;
             }
-            if(!allCompleted)
-            Upgrade();
+            if (!allCompleted)
+                Upgrade();
         }
         if (m_Panatalones.activeSelf)
             m_Calzones.SetActive(false);

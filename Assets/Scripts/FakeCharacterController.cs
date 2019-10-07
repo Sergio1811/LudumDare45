@@ -16,6 +16,8 @@ public class FakeCharacterController : MonoBehaviour
     float timeRellenado = 0;
     ObjectFall[] estanterias;
 
+    public SceneManagement m_SceneManager;
+
     private void Start()
     {
         estanterias = GameObject.FindObjectsOfType<ObjectFall>();
@@ -75,6 +77,7 @@ public class FakeCharacterController : MonoBehaviour
         }
         else if(other.gameObject.CompareTag("Meta") && timeRellenado == 0)
         {
+            m_SceneManager.ActivateCanvas();
             timeRellenado = 15;
             foreach (ObjectFall obj in estanterias)
                 obj.Rellenar();
