@@ -3952,6 +3952,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1f5f335409557b046b457b8b20185665, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  m_Canvas: {fileID: 0}
+  m_Clothes: []
+  m_Panatalones: {fileID: 0}
+  m_Calzones: {fileID: 0}
+  m_SpawnPoint: {fileID: 0}
+  m_PLayer: {fileID: 0}
+  m_ASource: {fileID: 0}
+  m_MoneySound: {fileID: 0}
+  fallClip: {fileID: 0}
 --- !u!4 &1318415973
 Transform:
   m_ObjectHideFlags: 0
@@ -4653,7 +4662,7 @@ MonoBehaviour:
   - {fileID: 3602537305751726357}
   - {fileID: 4223375756288549458}
   Transform: {fileID: 1581763198}
-  m_rotationSpeed: 5
+  m_rotationSpeed: 50
   minFov: 20
   maxFov: 50
   FovSpeed: 10
@@ -12752,6 +12761,10 @@ MonoBehaviour:
   m_Life: 100
   m_Hit: 0
   myAnimator: {fileID: 2646650006499039221}
+  m_ASource: {fileID: 0}
+  m_ClipSilbato: {fileID: 0}
+  m_ClipScream: {fileID: 0}
+  m_ClipDead: {fileID: 0}
 --- !u!136 &5779512581380611110
 CapsuleCollider:
   m_ObjectHideFlags: 0

@@ -24,7 +24,7 @@ public class SceneController : MonoBehaviour
     }
     private void Update()
     {
-        this.gameObject.transform.Rotate(this.transform.up, m_rotationSpeed);
+        this.gameObject.transform.Rotate(this.transform.up, m_rotationSpeed*Time.deltaTime);
        // this.gameObject.transform.Rotate(this.transform.forward, m_rotationSpeed);
 
         if (Input.GetKeyDown(KeyCode.RightArrow))
