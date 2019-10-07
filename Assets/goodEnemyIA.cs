@@ -149,7 +149,7 @@ public class goodEnemyIA : MonoBehaviour
     int GetClosestPatrolPositionId()
     {
         int l_Closest = 0;
-        float l_Nearby = 10000;
+        float l_Nearby = 10000000;
         for (int i = 0; i < m_PatrolPositions.Count; i++)
         {
             if (GetSqrDistanceXZToPosition(m_PatrolPositions[i].transform.position) < l_Nearby * l_Nearby)

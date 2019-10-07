@@ -5,7 +5,6 @@ using UnityEngine;
 public class GameManager : MonoBehaviour
 {
     private static GameManager instance;
-    [HideInInspector]
     public GameObject m_Player;
     public CameraShake m_CameraShake;
     public int random = 1;

@@ -12,21 +12,13 @@ public class FakeCharacterController : MonoBehaviour
 
     public CartController _cartController;
     bool hit = false;
-    float hitTime = 1.5f;
+    float hitTime = 3f;
     void Update()
     {
         //transform.Rotate(0, Input.GetAxis("Horizontal") * Time.deltaTime * rotationSpeed, 0);
         //transform.Translate(0, 0, Input.GetAxis("Vertical") * Time.deltaTime * movementSpeed);
 
-        if (hit && hitTime <= 0.0f)
-        {
-            _cartController.eugenioAnimator.SetTrigger("Hit");
-            hitTime = 1.5f;
-            hit = false;
-        }
-
-        if (!hit && hitTime > 0.0f)
-            hitTime -= Time.deltaTime;
+        hitTime -= Time.deltaTime;
     }
 
     private void OnCollisionEnter(Collision collision)
@@ -36,8 +28,12 @@ public class FakeCharacterController : MonoBehaviour
         else if(collision.gameObject.GetComponent<CuboEstanteriaScript>() != null)
             collision.gameObject.GetComponent<CuboEstanteriaScript>().ObjectFalling();
 
-        if (!hit)
-            hit = true;
+        if (hitTime <= 0.0f)
+        {
+            _cartController.eugenioAnimator.SetTrigger("Hit");
+            hitTime = 3f;
+            hit = false;
+        }
     }
 
     private void OnTriggerEnter(Collider other)
