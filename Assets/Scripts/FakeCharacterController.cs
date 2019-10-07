@@ -78,17 +78,13 @@ public class FakeCharacterController : MonoBehaviour
         else if(other.gameObject.CompareTag("Meta") && timeRellenado == 0)
         {
             m_SceneManager.ActivateCanvas();
-            timeRellenado = 15;
             
+            foreach (ObjectFall obj in estanterias)
+                obj.Rellenar();
+            timeRellenado = 15;
+
         }
     }
 
-    private void OnTriggerExit(Collider other)
-    {
-        if (other.gameObject.CompareTag("Meta") && timeRellenado == 0)
-        {
-            foreach (ObjectFall obj in estanterias)
-                obj.Rellenar();
-        }
-    }
+    
 }
