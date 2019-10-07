@@ -49,7 +49,7 @@ public class FakeCharacterController : MonoBehaviour
             other.gameObject.GetComponent<Collider>().enabled = false;
             other.transform.parent = this.gameObject.transform;
             GameManager.Instance.sumPoints(30);
-            if(GameManager.Instance.points > numLayer * 50 && numLayer <= 5)
+            if(GameManager.Instance.points > numLayer * 50 && numLayer < 5)
             {
                 if (numLayer > 0)
                     layers[numLayer - 1].SetActive(false);
