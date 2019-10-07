@@ -25,13 +25,13 @@ public class CuboEstanteriaScript : MonoBehaviour
     public void ObjectFalling()
     {
         ObjetoEstanteria[] objEstant = GetComponentsInChildren<ObjetoEstanteria>();
-        Vector3 l_Direction = ((GameManager.Instance.m_Player.transform.position - gameObject.transform.position).normalized / 3  + Vector3.up).normalized;
+        Vector3 l_Direction = ((GameManager.Instance.m_Player.transform.position - gameObject.transform.position).normalized / 2  + Vector3.up).normalized;
 
         for (int i = 0; i < objEstant.Length; i++)
         {
             GameManager.Instance.random++;
             Random.InitState(GameManager.Instance.random);
-            objEstant[i].rb.AddForce(l_Direction * Random.Range(m_ExplosionForce * 0.3f, m_ExplosionForce * 1.2f), ForceMode.Impulse);
+            objEstant[i].rb.AddForce(l_Direction * Random.Range(m_ExplosionForce * 0.75f, m_ExplosionForce * 1.35f), ForceMode.Impulse);
             objEstant[i].rb.transform.SetParent(null);
             objEstant[i].caido = true;
         }
