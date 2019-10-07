@@ -37,13 +37,7 @@ public class ObjectFall : MonoBehaviour
     private void Start()
     {
 
-        for (int i = 0; i < estanterias.Count; i++)
-        {
-            Random.InitState(gm.random * 2);
-            objetosEstanterias.Add(new List<PakageObjects>());
-            if(PoolObjetos.Count > 0)
-                LlenaEstanteria(objetosEstanterias[i], estanterias[i]);
-        }
+        Rellenar();
 
 
     }
@@ -69,7 +63,7 @@ public class ObjectFall : MonoBehaviour
 
             _list.Add(Instantiate(PoolObjetos[random], _estanteria));
             distance += _list[_list.Count - 1].transform.GetChild(0).GetComponent<ObjetoEstanteria>().ancho * 0.001f;
-            _list[_list.Count - 1].transform.localPosition = new Vector3(0,0, distance*0.1f);
+            _list[_list.Count - 1].transform.localPosition = new Vector3(0, 0, distance * 0.1f);
             //_list[_list.Count - 1].transform.parent = _estanteria;
 
             distance += 0.5f;
@@ -99,7 +93,8 @@ public class ObjectFall : MonoBehaviour
     {
         if (Input.GetKeyDown(KeyCode.F))
         {
-            ObjectFalling();
+            //ObjectFalling();
+            //Rellenar();
         }
     }
 
@@ -116,5 +111,27 @@ public class ObjectFall : MonoBehaviour
         }
 
         //StartCoroutine(GameManager.Instance.m_CameraShake.Shake(m_Duration,m_Force, m_MaxDistance));
+    }
+
+    public void Rellenar()
+    {
+
+            foreach (var item in objetosEstanterias)
+            {
+                foreach (var caca in item)
+                {
+                Destroy(caca.gameObject);
+                }
+            }
+        
+
+        objetosEstanterias.Clear();
+        for (int i = 0; i < estanterias.Count; i++)
+        {
+            Random.InitState(gm.random * 2);
+            objetosEstanterias.Add(new List<PakageObjects>());
+            if (PoolObjetos.Count > 0)
+                LlenaEstanteria(objetosEstanterias[i], estanterias[i]);
+        }
     }
 }
