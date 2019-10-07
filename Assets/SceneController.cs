@@ -8,6 +8,15 @@ public class SceneController : MonoBehaviour
     public GameObject[] AllObjects;
     public Transform Transform;
 
+    public float m_rotationSpeed;
+    public float minFov;
+    public float maxFov;
+    public float FovSpeed;
+
+
+    public Camera m_MyCamera;
+
+
  
     private void Start()
     {
@@ -15,7 +24,17 @@ public class SceneController : MonoBehaviour
     }
     private void Update()
     {
-        this.gameObject.transform.Rotate(this.transform.up, 10);
+        this.gameObject.transform.Rotate(this.transform.up, m_rotationSpeed);
+       // this.gameObject.transform.Rotate(this.transform.forward, m_rotationSpeed);
+
+        if (Input.GetKeyDown(KeyCode.RightArrow))
+            NextObject();
+        if (Input.GetKeyDown(KeyCode.LeftArrow))
+            PreviousObject();
+
+        if (Input.GetKey(KeyCode.Z))
+           m_MyCamera.fieldOfView = Mathf.Clamp (m_MyCamera.fieldOfView - FovSpeed*Time.deltaTime, minFov, maxFov);
+        if(Input.GetKeyDown(KeyCode.R)) m_MyCamera.fieldOfView = maxFov;
     }
 
     public void NextObject()
@@ -30,9 +49,11 @@ public class SceneController : MonoBehaviour
     public void PreviousObject()
     {
         if (currentObject > 0)
-            currentObject++;
+            currentObject--;
         else
-            currentObject = AllObjects.Length-1;
+        {
+            currentObject = AllObjects.Length - 1;
+        }
 
         ChangeMesh();
     }
