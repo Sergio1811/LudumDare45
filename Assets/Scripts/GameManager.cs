@@ -45,7 +45,10 @@ public class GameManager : MonoBehaviour
 
     public void sumPoints(int _points)
     {
-        points += _points;
+        if (points + _points > 0)
+            points += _points;
+        else
+            points = 0;
     }
 
 }

@@ -312,7 +312,7 @@ MonoBehaviour:
   ancho: 18
   hondo: 8
   alto: 24
-  puntuacion: 0
+  puntuacion: 1
   caido: 0
   rb: {fileID: 0}
   objetos: []

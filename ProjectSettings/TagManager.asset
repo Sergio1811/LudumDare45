@@ -6,6 +6,7 @@ TagManager:
   tags:
   - Object
   - Meta
+  - Enemy
   layers:
   - Default
   - TransparentFX

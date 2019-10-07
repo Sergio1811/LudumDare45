@@ -47,6 +47,12 @@ public class FakeCharacterController : MonoBehaviour
             hitTime = 3f;
             hit = false;
         }
+
+        if (collision.gameObject.tag == "Enemy" )
+        {
+            GameManager.Instance.sumPoints(-10);
+            TextManager.Instance.UpdateText();
+        }
     }
 
     private void OnTriggerEnter(Collider other)
@@ -57,8 +63,9 @@ public class FakeCharacterController : MonoBehaviour
             other.gameObject.GetComponentInChildren<Collider>().isTrigger = false;
             other.gameObject.GetComponent<Collider>().enabled = false;
             other.transform.parent = this.gameObject.transform;
-            GameManager.Instance.sumPoints(30);
-            if(GameManager.Instance.points > numLayer * 50 && numLayer < 5)
+            GameManager.Instance.sumPoints((int)other.gameObject.GetComponent<ObjetoEstanteria>().puntuacion);
+            TextManager.Instance.UpdateText();
+            if(GameManager.Instance.points > numLayer * 20 && numLayer < 5)
             {
                 if (numLayer > 0)
                     layers[numLayer - 1].SetActive(false);
