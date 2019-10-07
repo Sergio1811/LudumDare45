@@ -10,6 +10,7 @@ public class GameManager : MonoBehaviour
     public int random = 1;
 
     public int points;
+    public GameObject[] enemies;
 
     void Awake()
     {
@@ -27,6 +28,7 @@ public class GameManager : MonoBehaviour
 
     private void Start()
     {
+        enemies = GameObject.FindGameObjectsWithTag("Enemy");
         m_Player = GameObject.Find("Cart");
         points = 0;
     }
@@ -49,6 +51,8 @@ public class GameManager : MonoBehaviour
             points += _points;
         else
             points = 0;
+
+        TextManager.Instance.UpdateText();
     }
 
 }

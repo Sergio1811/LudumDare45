@@ -2334,14 +2334,6 @@ PrefabInstance:
       propertyPath: m_LocalScale.z
       value: 40
       objectReference: {fileID: 0}
-    - target: {fileID: 1556525000, guid: 90b7af9b07f4ebc43a8730da2419a3c8, type: 3}
-      propertyPath: m_Radius
-      value: 0.1
-      objectReference: {fileID: 0}
-    - target: {fileID: 1556525000, guid: 90b7af9b07f4ebc43a8730da2419a3c8, type: 3}
-      propertyPath: m_Height
-      value: 0.2
-      objectReference: {fileID: 0}
     - target: {fileID: 704378510, guid: 90b7af9b07f4ebc43a8730da2419a3c8, type: 3}
       propertyPath: m_PatrolPositions.Array.size
       value: 11
@@ -2394,6 +2386,14 @@ PrefabInstance:
       propertyPath: m_GameManager
       value: 
       objectReference: {fileID: 289032198}
+    - target: {fileID: 1556525000, guid: 90b7af9b07f4ebc43a8730da2419a3c8, type: 3}
+      propertyPath: m_Radius
+      value: 0.1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1556525000, guid: 90b7af9b07f4ebc43a8730da2419a3c8, type: 3}
+      propertyPath: m_Height
+      value: 0.2
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 90b7af9b07f4ebc43a8730da2419a3c8, type: 3}
 --- !u!1 &1725440759
@@ -2633,6 +2633,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Canvas
       objectReference: {fileID: 0}
+    - target: {fileID: 6197206316279333973, guid: ca59dfd4be54f8645be2bb0d587fa28b,
+        type: 3}
+      propertyPath: m_Text
+      value: $ 00000
+      objectReference: {fileID: 0}
     - target: {fileID: 6197206315942900817, guid: ca59dfd4be54f8645be2bb0d587fa28b,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -2792,11 +2797,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_AnchorMax.x
       value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 6197206316279333973, guid: ca59dfd4be54f8645be2bb0d587fa28b,
-        type: 3}
-      propertyPath: m_Text
-      value: $ 00000
       objectReference: {fileID: 0}
     - target: {fileID: 6216342410804963005, guid: ca59dfd4be54f8645be2bb0d587fa28b,
         type: 3}

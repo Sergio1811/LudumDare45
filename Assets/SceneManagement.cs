@@ -51,10 +51,13 @@ public class SceneManagement : MonoBehaviour
         bool allCompleted = true;
 
 
-        if (!m_Clothes[number].activeSelf )
+        if (!m_Clothes[number].activeSelf)
         {
-            m_Clothes[number].SetActive(true);
-          
+            if (GameManager.Instance.points >= 100)
+            {
+                m_Clothes[number].SetActive(true);
+                GameManager.Instance.sumPoints(-100);
+            }
         }
         else
         {
