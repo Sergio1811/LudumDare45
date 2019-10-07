@@ -21,7 +21,7 @@ public class ObjetoEstanteria : MonoBehaviour
             objetos.Add(transform.GetChild(i).gameObject);
         }
         rb = gameObject.GetComponent<Rigidbody>();
-        maxTime = Random.Range(20, 60);
+        maxTime = Random.Range(5, 10);
     }
 
     private void Update()
