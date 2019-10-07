@@ -85,7 +85,10 @@ public class FakeCharacterController : MonoBehaviour
 
     private void OnTriggerExit(Collider other)
     {
-        foreach (ObjectFall obj in estanterias)
-            obj.Rellenar();
+        if (other.gameObject.CompareTag("Meta") && timeRellenado == 0)
+        {
+            foreach (ObjectFall obj in estanterias)
+                obj.Rellenar();
+        }
     }
 }
