@@ -125,9 +125,9 @@ public class goodEnemyIA : MonoBehaviour
     void UpdateChaseState()
     {
         /*if (GetSqrDistanceXZToPosition(GameManager.Instance.m_Player.transform.position) < m_MinDistanceToAttack * m_MinDistanceToAttack)
-            SetAttackState();
+            SetAttackState();*/
         if (GetSqrDistanceXZToPosition(GameManager.Instance.m_Player.transform.position) > m_MaxDistanceToPatrol * m_MaxDistanceToPatrol)
-            SetPatrolState();*/
+            SetPatrolState();
 
         if (m_NavMeshAgent.isStopped == false)
             SetNextChasePosition();
